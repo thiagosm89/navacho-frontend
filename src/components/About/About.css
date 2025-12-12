@@ -1,0 +1,151 @@
+.about {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, var(--navacho-verde-escuro) 0%, var(--navacho-verde-medio) 100%);
+  color: var(--navacho-branco);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-title {
+  font-family: 'Rye', cursive;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  color: var(--navacho-branco);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-paragraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.about-paragraph strong {
+  color: var(--navacho-bege-medio);
+  font-weight: 600;
+}
+
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(8px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.about-card h3 {
+  font-family: 'Rye', cursive;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--navacho-bege-medio);
+  letter-spacing: 1px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-visual {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .about-paragraph {
+    font-size: 1rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 2rem 0.75rem;
+  }
+
+  .about-container {
+    gap: 2rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+
+  .about-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+}
+

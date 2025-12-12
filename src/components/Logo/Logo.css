@@ -1,0 +1,72 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  font-family: 'Rye', cursive;
+  font-size: 2.2rem;
+  color: #FFD700;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-shadow: 
+    3px 3px 8px rgba(0, 0, 0, 0.9),
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(255, 215, 0, 0.8),
+    0 0 50px rgba(255, 193, 7, 0.6);
+  filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.7));
+}
+
+@media (max-width: 968px) {
+  .logo-image {
+    height: 55px;
+  }
+
+  .logo-text {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 45px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    gap: 0.75rem;
+  }
+
+  .logo-image {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+}

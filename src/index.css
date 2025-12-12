@@ -1,0 +1,84 @@
+:root {
+  /* Paleta de Cores Gaúcha - Navacho */
+  /* Baseada nas cores tradicionais do Rio Grande do Sul */
+  
+  /* Verde Gaúcho - cor principal */
+  --navacho-verde-escuro: #1a4d2e;
+  --navacho-verde-medio: #2d6a4f;
+  --navacho-verde-claro: #40916c;
+  --navacho-verde-suave: #52b788;
+  
+  /* Vermelho Gaúcho - cor secundária */
+  --navacho-vermelho-escuro: #8b1a1a;
+  --navacho-vermelho-medio: #b91c1c;
+  --navacho-vermelho-claro: #dc2626;
+  
+  /* Marrom/Couro - cor terciária */
+  --navacho-marrom-escuro: #3d2817;
+  --navacho-marrom-medio: #5c3d2e;
+  --navacho-marrom-claro: #8b6f47;
+  --navacho-couro: #a0826d;
+  
+  /* Bege/Creme - cor neutra */
+  --navacho-bege-escuro: #d4a574;
+  --navacho-bege-medio: #e9c46a;
+  --navacho-bege-claro: #f4e4c1;
+  --navacho-creme: #fef9f3;
+  
+  /* Preto e Branco */
+  --navacho-preto: #0d0d0d;
+  --navacho-branco: #ffffff;
+  
+  /* Cinzas */
+  --navacho-cinza-escuro: #2d2d2d;
+  --navacho-cinza-medio: #6b6b6b;
+  --navacho-cinza-claro: #e5e5e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--navacho-creme);
+  color: var(--navacho-preto);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navacho-creme);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navacho-verde-medio);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navacho-verde-escuro);
+}
+
