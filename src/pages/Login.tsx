@@ -140,12 +140,11 @@ const Login = () => {
               <p className="login-register">
                 Não tem uma conta?{' '}
                 <a 
-                  href="#" 
+                  href="#"
                   className="login-link"
                   onClick={(e) => {
                     e.preventDefault()
-                    // TODO: Implementar página de registro
-                    alert('Página de registro em breve!')
+                    navigate('/cadastro', { state: { from: location.pathname } })
                   }}
                 >
                   Cadastre-se

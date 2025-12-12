@@ -436,6 +436,113 @@ const Barbearias = () => {
           data: '2024-01-05'
         }
       ]
+    },
+    {
+      id: 5,
+      nome: 'Barbearia Brutu`s',
+      endereco: 'Av. Liberdade, 140',
+      cidade: 'Santa Maria',
+      telefone: '(55) 95555-5555',
+      avaliacaoMedia: 4.8,
+      totalAvaliacoes: 142,
+      horarioFuncionamento: 'Seg-Sex: 8h às 20h | Sáb: 8h às 18h',
+      servicos: [
+        'Aplicação de Prótese Capilar',
+        'Preenchimento de Barba',
+        'Pigmentação',
+        'Corte de Cabelo',
+        'Desenho e Ajuste de Barba'
+      ],
+      coordenadas: {
+        latitude: -29.6860,
+        longitude: -53.8070
+      },
+      avaliacoes: [
+        {
+          id: 34,
+          cliente: 'Carlos Henrique',
+          nota: 5,
+          comentario: 'Excelente trabalho com prótese capilar! Profissionais muito qualificados e ambiente moderno.',
+          data: '2024-01-22'
+        },
+        {
+          id: 35,
+          cliente: 'Rafael Mendes',
+          nota: 5,
+          comentario: 'Melhor barbearia para serviços especializados. Preenchimento de barba ficou perfeito!',
+          data: '2024-01-20'
+        },
+        {
+          id: 36,
+          cliente: 'Thiago Silva',
+          nota: 5,
+          comentario: 'Pigmentação de excelente qualidade! Resultado natural e duradouro.',
+          data: '2024-01-18'
+        },
+        {
+          id: 37,
+          cliente: 'Lucas Oliveira',
+          nota: 4,
+          comentario: 'Ótimo atendimento e corte impecável. Ambiente limpo e organizado.',
+          data: '2024-01-15'
+        },
+        {
+          id: 38,
+          cliente: 'Felipe Costa',
+          nota: 5,
+          comentario: 'Desenho e ajuste de barba perfeitos! Profissionais muito experientes.',
+          data: '2024-01-12'
+        },
+        {
+          id: 39,
+          cliente: 'Bruno Santos',
+          nota: 5,
+          comentario: 'Serviços de alta qualidade! Recomendo para quem busca excelência.',
+          data: '2024-01-10'
+        },
+        {
+          id: 40,
+          cliente: 'Gabriel Alves',
+          nota: 4,
+          comentario: 'Boa experiência, profissionais atenciosos e serviços bem executados.',
+          data: '2024-01-08'
+        },
+        {
+          id: 41,
+          cliente: 'Matheus Rocha',
+          nota: 5,
+          comentario: 'Melhor barbearia especializada de Santa Maria! Sempre satisfeito.',
+          data: '2024-01-05'
+        },
+        {
+          id: 42,
+          cliente: 'Pedro Lima',
+          nota: 4,
+          comentario: 'Ótimo trabalho com prótese capilar. Ambiente profissional e acolhedor.',
+          data: '2024-01-03'
+        },
+        {
+          id: 43,
+          cliente: 'André Pereira',
+          nota: 5,
+          comentario: 'Serviços diferenciados e de primeira qualidade! Super recomendo.',
+          data: '2024-01-01'
+        },
+        {
+          id: 44,
+          cliente: 'Vinicius Torres',
+          nota: 4,
+          comentario: 'Bom atendimento e resultados satisfatórios. Voltarei com certeza.',
+          data: '2023-12-29'
+        },
+        {
+          id: 45,
+          cliente: 'Henrique Cardoso',
+          nota: 5,
+          comentario: 'Profissionais muito competentes! Preenchimento de barba ficou excelente.',
+          data: '2023-12-27'
+        }
+      ]
     }
   ]
 
