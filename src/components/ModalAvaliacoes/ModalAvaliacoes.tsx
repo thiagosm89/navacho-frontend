@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import { buscarAvaliacoes } from '../../services/mockAvaliacoesService'
 import './ModalAvaliacoes.css'

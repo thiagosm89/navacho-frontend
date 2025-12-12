@@ -22,7 +22,6 @@ interface Barbearia {
   endereco: string
   cidade: string
   telefone: string
-  imagem?: string
   avaliacaoMedia: number
   totalAvaliacoes: number
   avaliacoes: Avaliacao[]

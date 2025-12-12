@@ -184,10 +184,6 @@ const MapaBarbearias = ({ localizacaoUsuario, barbearias, barbeariaSelecionada }
         map.fitBounds(group.getBounds().pad(0.1))
       }
     }
-
-    return () => {
-      // Cleanup será feito no próximo useEffect
-    }
   }, [localizacaoUsuario, barbearias, barbeariaSelecionada])
 
   return <div ref={mapContainerRef} className="mapa-barbearias" />

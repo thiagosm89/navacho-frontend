@@ -25,7 +25,6 @@ interface Barbearia {
   endereco: string
   cidade: string
   telefone: string
-  imagem?: string
   avaliacaoMedia: number
   totalAvaliacoes: number
   avaliacoes: Avaliacao[]
@@ -38,7 +37,6 @@ interface Barbearia {
 interface EnderecoCompleto {
   cidade: string
   estado: string
-  enderecoCompleto?: string
 }
 
 const Barbearias = () => {
@@ -91,8 +89,7 @@ const Barbearias = () => {
         const address = data.address
         return {
           cidade: address.city || address.town || address.village || address.municipality || 'Cidade não encontrada',
-          estado: address.state || address.region || 'Estado não encontrado',
-          enderecoCompleto: data.display_name
+          estado: address.state || address.region || 'Estado não encontrado'
         }
       }
       
