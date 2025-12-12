@@ -2,24 +2,29 @@ import FeatureCard from '../FeatureCard/FeatureCard'
 import './Features.css'
 
 const Features = () => {
-  const features = [
+  const features: Array<{
+    icon: string
+    title: string
+    description: string
+    color: 'verde' | 'marrom' | 'vermelho'
+  }> = [
     {
       icon: '✂️',
       title: 'Para Barbeiros',
       description: 'Gerencie sua agenda, clientes e serviços de forma simples e eficiente. Aumente sua produtividade e organize seu negócio com ferramentas desenvolvidas especialmente para você.',
-      color: 'verde'
+      color: 'verde' as const
     },
     {
       icon: '👤',
       title: 'Para Clientes',
       description: 'Agende seus cortes e serviços com facilidade. Encontre os melhores barbeiros da sua região e gerencie todos os seus agendamentos em um só lugar, sem complicação.',
-      color: 'marrom'
+      color: 'marrom' as const
     },
     {
       icon: '📦',
       title: 'Para Fornecedores',
       description: 'Conecte-se diretamente com barbearias e barbeiros. Expanda seu mercado, aumente suas vendas e fortaleça relacionamentos através da nossa plataforma.',
-      color: 'vermelho'
+      color: 'vermelho' as const
     }
   ]
 
