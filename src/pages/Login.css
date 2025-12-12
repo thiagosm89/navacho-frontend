@@ -198,7 +198,7 @@
 }
 
 .login-logo-image {
-  height: 140px;
+  height: 280px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
@@ -206,7 +206,7 @@
 
 .login-logo-text {
   font-family: 'Rye', cursive;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   color: #FFD700;
   letter-spacing: 3px;
   font-weight: 400;
@@ -364,11 +364,11 @@
 
 @media (max-width: 968px) {
   .login-logo-image {
-    height: 100px;
+    height: 160px;
   }
 
   .login-logo-text {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
   }
 
   .login-title {
@@ -390,11 +390,11 @@
   }
 
   .login-logo-image {
-    height: 80px;
+    height: 140px;
   }
 
   .login-logo-text {
-    font-size: 2.2rem;
+    font-size: 3rem;
     letter-spacing: 1.5px;
   }
 
@@ -427,11 +427,11 @@
   }
 
   .login-logo-image {
-    height: 60px;
+    height: 120px;
   }
 
   .login-logo-text {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
   }
 
