@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import logomarcaImg from '../../assets/logomarca.png'
 import './Hero.css'
 
 const Hero = () => {
+  const navigate = useNavigate()
   // Tentar usar a importação, se falhar usar caminho público
   const logoSrc = typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca.png'
   
@@ -28,11 +30,16 @@ const Hero = () => {
           <div className="hero-buttons">
             <button 
               className="btn-hero-primary"
-              onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: { page: 'login' } }))}
+              onClick={() => navigate('/login', { state: { from: window.location.pathname } })}
             >
               Começar Agora
             </button>
-            <button className="btn-hero-secondary">Saiba Mais</button>
+            <button 
+              className="btn-hero-secondary"
+              onClick={() => navigate('/barbearias')}
+            >
+              Ver Barbearias
+            </button>
           </div>
         </div>
         <div className="hero-image">

@@ -77,6 +77,12 @@
   height: 100%;
 }
 
+.nav-link-home {
+  font-size: 1.3rem;
+  padding: 0 1rem;
+  justify-content: center;
+}
+
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
