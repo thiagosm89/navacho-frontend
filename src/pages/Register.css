@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
   /* Base de couro autêntico - mesma da landing page */
   background: #9D7A4A;
   position: relative;

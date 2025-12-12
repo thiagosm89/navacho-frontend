@@ -1,12 +1,15 @@
 .header {
-  background-color: rgba(184, 134, 11, 0.95);
+  background-color: rgba(185, 28, 28, 0.95);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
   padding: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(139, 26, 26, 0.3);
 }
 
 .header-container {
@@ -86,15 +89,16 @@
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
-  color: var(--navacho-verde-escuro);
+  color: var(--navacho-vermelho-escuro);
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 
 .btn-primary {
-  background-color: var(--navacho-verde-escuro);
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
   color: var(--navacho-branco);
-  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.4);
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-weight: 600;
@@ -108,12 +112,14 @@
   align-self: center;
   margin: 0.5rem 0;
   height: auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--navacho-verde-medio);
+  background-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 77, 46, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 968px) {
@@ -141,7 +147,7 @@
     top: 60px;
     left: 0;
     right: 0;
-    background-color: rgba(184, 134, 11, 0.98);
+    background-color: rgba(185, 28, 28, 0.98);
     backdrop-filter: blur(10px);
     flex-direction: column;
     width: 100%;
