@@ -105,6 +105,13 @@ const Header = () => {
           >
             Barbearias
           </Link>
+          <Link 
+            to="/cadastro"
+            className="nav-link" 
+            onClick={fecharMenu}
+          >
+            Cadastro
+          </Link>
           <a href="#contato" className="nav-link" onClick={handleContatoClick}>Contato</a>
         </nav>
         <button className="btn-primary" onClick={handleLoginClick}>Entrar</button>

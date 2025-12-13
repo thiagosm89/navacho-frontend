@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import logomarcaImg from '../assets/logomarca_preto.png'
 import './Login.css'
 
@@ -11,22 +13,6 @@ const Login = () => {
   const [erro, setErro] = useState('')
   const [carregando, setCarregando] = useState(false)
 
-  const handleVoltar = () => {
-    const from = (location.state as { from?: string })?.from
-    
-    // Se veio de outra página (não é a própria página de login), volta para lá
-    if (from && from !== '/login') {
-      navigate(from)
-    } else {
-      // Tenta voltar no histórico do navegador
-      // Se não houver histórico, vai para landing page como fallback
-      if (window.history.length > 1) {
-        navigate(-1)
-      } else {
-        navigate('/')
-      }
-    }
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -73,7 +59,9 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      <div className="login-container">
+      <Header />
+      <div className="login-page-content">
+        <div className="login-container">
         <div className="login-header">
           <div className="login-logo-wrapper">
             <img 
@@ -127,13 +115,6 @@ const Login = () => {
           </button>
 
           <div className="login-footer">
-            <button
-              type="button"
-              onClick={handleVoltar}
-              className="btn-voltar"
-            >
-              ← Voltar
-            </button>
             <p className="login-register">
               Não tem uma conta?{' '}
               <a 
@@ -149,7 +130,9 @@ const Login = () => {
             </p>
           </div>
         </form>
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }
