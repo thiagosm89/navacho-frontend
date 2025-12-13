@@ -12,7 +12,6 @@ const Logo = () => {
         alt="TapaNoVisu Logo" 
         className="logo-image"
       />
-      <span className="logo-text">TapaNoVisu</span>
     </div>
   )
 }

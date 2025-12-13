@@ -20,12 +20,9 @@ const Hero = () => {
               className="hero-logo"
             />
           </div>
-          <h1 className="hero-title">
-            <span className="title-main">TapaNoVisu</span>
-          </h1>
           <p className="hero-description">
             A plataforma que conecta você aos melhores barbeiros e barbearias. 
-            <strong> TapaNoVisu</strong> oferece uma experiência completa para quem busca excelência em cuidados do visual. 
+            Oferecemos uma experiência completa para quem busca excelência em cuidados do visual. 
             Agende seus cortes, descubra profissionais de qualidade e encontre quem entende que uma apresentação impecável 
             é essencial para sua confiança e presença.
           </p>

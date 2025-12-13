@@ -246,7 +246,6 @@ const Register = () => {
                 alt="TapaNoVisu Logo" 
                 className="register-logo-image"
               />
-              <span className="register-logo-text">TapaNoVisu</span>
             </div>
             <h1 className="register-title">Criar Conta</h1>
             <p className="register-subtitle">Preencha os dados abaixo para se cadastrar</p>

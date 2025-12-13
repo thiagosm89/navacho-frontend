@@ -81,7 +81,6 @@ const Login = () => {
               alt="TapaNoVisu Logo" 
               className="login-logo-image"
             />
-            <span className="login-logo-text">TapaNoVisu</span>
           </div>
           <p className="login-subtitle">Entre na sua conta para continuar</p>
         </div>
