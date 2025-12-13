@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--navacho-preto);
-  color: var(--navacho-branco);
+  background-color: var(--tapanovisu-preto);
+  color: var(--tapanovisu-branco);
   padding: 3rem 2rem 1.5rem;
 }
 
@@ -22,8 +22,12 @@
   gap: 1rem;
 }
 
+.footer-section:first-child {
+  justify-content: center;
+}
+
 .footer-description {
-  color: var(--navacho-cinza-claro);
+  color: var(--tapanovisu-cinza-claro);
   line-height: 1.7;
   max-width: 300px;
 }
@@ -31,7 +35,7 @@
 .footer-title {
   font-family: 'Rye', cursive;
   font-size: 1.5rem;
-  color: var(--navacho-verde-claro);
+  color: #E8D5B7;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
 }
@@ -44,24 +48,24 @@
 }
 
 .footer-links li {
-  color: var(--navacho-cinza-claro);
+  color: var(--tapanovisu-cinza-claro);
 }
 
 .footer-links a {
-  color: var(--navacho-cinza-claro);
+  color: var(--tapanovisu-cinza-claro);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--navacho-verde-claro);
+  color: var(--tapanovisu-branco);
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--navacho-cinza-escuro);
+  border-top: 1px solid var(--tapanovisu-cinza-escuro);
   padding-top: 1.5rem;
   text-align: center;
-  color: var(--navacho-cinza-medio);
+  color: var(--tapanovisu-cinza-medio);
   font-size: 0.9rem;
 }
 

@@ -54,7 +54,7 @@ const IconGalpao = () => {
         strokeWidth="1.5" 
         fill="none"
       />
-      {/* Cruz no topo (tradicional em galpões gaúchos) */}
+      {/* Cruz no topo */}
       <line 
         x1="12" 
         y1="3" 

@@ -1,16 +1,25 @@
-# Navacho - Frontend
+# TapaNoVisu - Frontend
 
-Frontend da plataforma Navacho desenvolvido em React + TypeScript + Vite.
+Frontend da plataforma TapaNoVisu desenvolvido em React + TypeScript + Vite.
 
-## 🎨 Paleta de Cores Gaúcha
+## 🎨 Paleta de Cores
 
-A paleta de cores foi inspirada na cultura gaúcha do Rio Grande do Sul, combinando com a identidade visual da logomarca. Veja detalhes completos em [PALETA_CORES.md](./PALETA_CORES.md).
+A paleta de cores utiliza tons de preto e branco, criando uma identidade visual moderna e elegante. Veja detalhes completos em [PALETA_CORES.md](./PALETA_CORES.md).
 
 ### Cores Principais
-- **Verde Gaúcho**: Representa os campos e pampas
-- **Vermelho Gaúcho**: Tradição e paixão do povo gaúcho
-- **Marrom/Couro**: Artigos tradicionais gaúchos
-- **Bege/Creme**: Tons naturais da região
+- **Preto**: `#000000` - Fundo sólido e elementos principais
+- **Branco**: `#ffffff` - Textos e elementos de destaque
+- **Cinza Escuro**: `#1a1a1a` - Elementos secundários
+- **Cinza Médio**: `#4a4a4a` - Elementos terciários
+- **Cinza Claro**: `#cccccc` - Elementos sutis
+
+### Cor Vintage para Títulos e Logos
+- **Bege Vintage**: `#E8D5B7` - **IMPORTANTE**: Esta cor deve ser usada em:
+  - **Todos os títulos principais** que usam a fonte `Rye`
+  - **Nome do site "TapaNoVisu"** em todas as logos
+  - **Textos de logo** em todas as páginas (login, register, etc.)
+  
+  Esta cor vintage adiciona um toque elegante e diferenciado aos elementos principais, evitando que tudo fique apenas em branco.
 
 ## 🚀 Como Executar
 
@@ -57,8 +66,9 @@ src/
 
 ## 🔤 Tipografia
 
-- **Título Principal**: Almendra Display (estilo velho oeste)
-- **Corpo do Texto**: Inter (moderna e legível)
+- **Títulos Principais**: Rye (fonte vintage) - **Cor: `#E8D5B7` (bege vintage)**
+- **Nome do Site/Logo**: Rye - **Cor: `#E8D5B7` (bege vintage)**
+- **Corpo do Texto**: Inter (moderna e legível) - Cor branca ou cinza claro
 
 ## 📱 Responsividade
 
@@ -69,4 +79,19 @@ A landing page é totalmente responsiva e se adapta a diferentes tamanhos de tel
 
 ## 🎨 Estilo
 
-O design combina elementos tradicionais gaúchos com modernidade, criando uma identidade visual única que representa a essência do Navacho: tradição + tecnologia.
+O design utiliza uma paleta monocromática (preto e branco) com texturas de barbearia, criando uma identidade visual moderna e elegante. A cor vintage `#E8D5B7` é aplicada estrategicamente em títulos e logos para adicionar sofisticação e evitar que tudo fique apenas em branco.
+
+### Regras de Cores para IA
+
+**SEMPRE usar a cor `#E8D5B7` (bege vintage) para:**
+- Títulos principais com fonte `Rye`
+- Nome do site "TapaNoVisu" em componentes de logo
+- Textos de logo em páginas de login, register e outras páginas
+- Qualquer elemento que use a fonte `Rye` em fundos escuros
+
+**NÃO usar branco puro (`#ffffff`) para:**
+- Títulos com fonte `Rye` (exceto quando em fundo branco)
+- Nome do site em logos
+- Textos de logo
+
+Esta regra garante consistência visual e identidade única da marca TapaNoVisu.

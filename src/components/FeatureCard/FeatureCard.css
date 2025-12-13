@@ -1,43 +1,44 @@
 .feature-card {
-  background-color: var(--navacho-creme);
+  background-color: var(--tapanovisu-branco);
   padding: 2.5rem;
   border-radius: 16px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px solid var(--tapanovisu-cinza-claro);
   cursor: pointer;
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--tapanovisu-preto);
 }
 
 .feature-card--verde {
-  border-top: 4px solid var(--navacho-verde-medio);
+  border-top: 4px solid var(--tapanovisu-preto);
 }
 
 .feature-card--verde:hover {
-  border-color: var(--navacho-verde-medio);
-  background-color: rgba(45, 106, 79, 0.05);
+  border-color: var(--tapanovisu-preto);
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 .feature-card--marrom {
-  border-top: 4px solid var(--navacho-marrom-medio);
+  border-top: 4px solid var(--tapanovisu-preto);
 }
 
 .feature-card--marrom:hover {
-  border-color: var(--navacho-marrom-medio);
-  background-color: rgba(92, 61, 46, 0.05);
+  border-color: var(--tapanovisu-preto);
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 .feature-card--vermelho {
-  border-top: 4px solid var(--navacho-vermelho-medio);
+  border-top: 4px solid var(--tapanovisu-preto);
 }
 
 .feature-card--vermelho:hover {
-  border-color: var(--navacho-vermelho-medio);
-  background-color: rgba(185, 28, 28, 0.05);
+  border-color: var(--tapanovisu-preto);
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 .feature-icon {
@@ -49,14 +50,14 @@
 .feature-title {
   font-family: 'Rye', cursive;
   font-size: 2rem;
-  color: var(--navacho-preto);
+  color: var(--tapanovisu-preto);
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
 
 .feature-description {
   font-size: 1.1rem;
-  color: var(--navacho-cinza-medio);
+  color: var(--tapanovisu-cinza-medio);
   line-height: 1.7;
 }
 

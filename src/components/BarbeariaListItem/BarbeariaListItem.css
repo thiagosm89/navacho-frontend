@@ -45,7 +45,7 @@
 .list-item-nome {
   font-family: 'Rye', cursive;
   font-size: 2rem;
-  color: var(--navacho-branco);
+  color: #E8D5B7;
   text-shadow: 
     2px 2px 6px rgba(0, 0, 0, 0.8),
     1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -55,7 +55,7 @@
 .list-item-distancia {
   background: rgba(64, 145, 108, 0.3);
   backdrop-filter: blur(5px);
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.95rem;
@@ -101,7 +101,7 @@
 .avaliacao-media {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
@@ -121,7 +121,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   font-size: 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
@@ -145,7 +145,7 @@
 .servico-tag {
   background: rgba(64, 145, 108, 0.3);
   backdrop-filter: blur(5px);
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -160,8 +160,8 @@
 }
 
 .btn-agendar {
-  background-color: var(--navacho-verde-medio);
-  color: var(--navacho-branco);
+  background-color: var(--tapanovisu-preto);
+  color: var(--tapanovisu-branco);
   border: none;
   padding: 0.875rem 1.5rem;
   border-radius: 8px;
@@ -174,7 +174,7 @@
 }
 
 .btn-agendar:hover {
-  background-color: var(--navacho-verde-escuro);
+  background-color: var(--tapanovisu-preto);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(45, 106, 79, 0.4);
 }
@@ -182,7 +182,7 @@
 .btn-avaliacoes {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   border: 2px solid rgba(255, 255, 255, 0.3);
   padding: 0.875rem 1.5rem;
   border-radius: 8px;
@@ -217,7 +217,7 @@
 .avaliacoes-title {
   font-family: 'Rye', cursive;
   font-size: 1.5rem;
-  color: var(--navacho-branco);
+  color: #E8D5B7;
   margin-bottom: 1rem;
   text-shadow: 
     2px 2px 6px rgba(0, 0, 0, 0.8),
@@ -227,7 +227,7 @@
 .avaliacoes-subtitle {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   margin-bottom: 1rem;
   margin-top: 1.5rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
@@ -241,7 +241,7 @@
   width: 100%;
   background: rgba(64, 145, 108, 0.3);
   backdrop-filter: blur(5px);
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   border: 2px solid rgba(64, 145, 108, 0.5);
   padding: 0.875rem 1.5rem;
   border-radius: 8px;
@@ -256,7 +256,7 @@
 
 .btn-ver-mais-avaliacoes:hover {
   background: rgba(64, 145, 108, 0.5);
-  border-color: var(--navacho-verde-claro);
+  border-color: var(--tapanovisu-preto);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(64, 145, 108, 0.4);
 }
@@ -281,7 +281,7 @@
 
 .avaliacao-cliente {
   font-weight: 600;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   font-size: 1.1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }

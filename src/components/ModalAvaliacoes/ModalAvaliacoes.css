@@ -54,7 +54,7 @@
 .modal-title {
   font-family: 'Rye', cursive;
   font-size: 1.75rem;
-  color: var(--navacho-branco);
+  color: #E8D5B7;
   margin: 0;
   text-shadow: 
     2px 2px 6px rgba(0, 0, 0, 0.8),
@@ -64,7 +64,7 @@
 .modal-close {
   background: transparent;
   border: none;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   font-size: 2rem;
   cursor: pointer;
   width: 40px;
@@ -108,7 +108,7 @@
 .stat-value {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--navacho-verde-claro);
+  color: var(--tapanovisu-branco);
   text-shadow: 
     2px 2px 6px rgba(0, 0, 0, 0.8),
     0 0 15px rgba(64, 145, 108, 0.5);
@@ -127,7 +127,7 @@
 .filtros-label {
   display: block;
   font-weight: 600;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   margin-bottom: 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
@@ -141,7 +141,7 @@
 .filtro-btn {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
@@ -158,9 +158,9 @@
 }
 
 .filtro-btn.ativo {
-  background: var(--navacho-verde-medio);
-  border-color: var(--navacho-verde-claro);
-  color: var(--navacho-branco);
+  background: var(--tapanovisu-preto);
+  border-color: var(--tapanovisu-branco);
+  color: var(--tapanovisu-branco);
   box-shadow: 0 2px 8px rgba(45, 106, 79, 0.4);
 }
 
@@ -190,7 +190,7 @@
 
 .avaliacao-cliente-modal {
   font-weight: 600;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   font-size: 1.1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
@@ -262,7 +262,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -270,7 +270,7 @@
   width: 40px;
   height: 40px;
   border: 4px solid rgba(255, 255, 255, 0.2);
-  border-top-color: var(--navacho-verde-claro);
+  border-top-color: var(--tapanovisu-branco);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -298,7 +298,7 @@
   justify-content: center;
   gap: 1.5rem;
   padding: 4rem 2rem;
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -306,7 +306,7 @@
   width: 50px;
   height: 50px;
   border: 5px solid rgba(255, 255, 255, 0.2);
-  border-top-color: var(--navacho-verde-claro);
+  border-top-color: var(--tapanovisu-branco);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

@@ -74,7 +74,7 @@ const Barbearias = () => {
         `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&addressdetails=1&accept-language=pt-BR`,
         {
           headers: {
-            'User-Agent': 'Navacho App' // Requerido pelo Nominatim
+            'User-Agent': 'TapaNoVisu App' // Requerido pelo Nominatim
           }
         }
       )
@@ -140,7 +140,7 @@ const Barbearias = () => {
   const barbeariasMockadas: Barbearia[] = [
     {
       id: 1,
-      nome: 'Barbearia do Gaúcho',
+      nome: 'Barbearia Premium',
       endereco: 'Av. Rio Branco, 123',
       cidade: 'Santa Maria',
       telefone: '(55) 99999-9999',
@@ -213,7 +213,7 @@ const Barbearias = () => {
           id: 9,
           cliente: 'Paulo Rocha',
           nota: 5,
-          comentario: 'Tradição e qualidade! Ambiente autêntico gaúcho.',
+          comentario: 'Excelente qualidade! Ambiente profissional e acolhedor.',
           data: '2024-01-01'
         },
         {
@@ -307,7 +307,7 @@ const Barbearias = () => {
     },
     {
       id: 3,
-      nome: 'Corte Gaúcho Premium',
+      nome: 'Corte Premium',
       endereco: 'Rua do Acampamento, 789',
       cidade: 'Santa Maria',
       telefone: '(55) 97777-7777',
@@ -397,7 +397,7 @@ const Barbearias = () => {
           id: 28,
           cliente: 'Paulo Rocha',
           nota: 5,
-          comentario: 'Tradição e qualidade! Ambiente autêntico gaúcho.',
+          comentario: 'Excelente qualidade! Ambiente profissional e acolhedor.',
           data: '2024-01-20'
         },
         {
@@ -548,6 +548,21 @@ const Barbearias = () => {
 
   // Calcular distâncias e ordenar por proximidade
   const [barbearias, setBarbearias] = useState<Barbearia[]>(barbeariasMockadas)
+  
+  // Paginação
+  const [paginaAtual, setPaginaAtual] = useState(1)
+  const itensPorPagina = 3
+  const totalPaginas = Math.ceil(barbearias.length / itensPorPagina)
+  
+  // Calcular índices para a página atual
+  const indiceInicial = (paginaAtual - 1) * itensPorPagina
+  const indiceFinal = indiceInicial + itensPorPagina
+  const barbeariasPaginaAtual = barbearias.slice(indiceInicial, indiceFinal)
+  
+  // Resetar para primeira página quando as barbearias mudarem
+  useEffect(() => {
+    setPaginaAtual(1)
+  }, [barbearias.length])
 
   useEffect(() => {
     if (localizacaoUsuario) {
@@ -602,7 +617,7 @@ const Barbearias = () => {
           </div>
 
           <div className="barbearias-lista">
-            {barbearias.map((barbearia) => (
+            {barbeariasPaginaAtual.map((barbearia) => (
               <div 
                 key={barbearia.id}
                 onClick={() => setBarbeariaSelecionada(barbearia.id === barbeariaSelecionada ? null : barbearia.id)}
@@ -612,6 +627,23 @@ const Barbearias = () => {
               </div>
             ))}
           </div>
+
+          {/* Paginação */}
+          {totalPaginas > 1 && (
+            <div className="paginacao">
+              <div className="paginacao-numeros">
+                {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((numero) => (
+                  <button
+                    key={numero}
+                    className={`btn-pagina ${paginaAtual === numero ? 'ativo' : ''}`}
+                    onClick={() => setPaginaAtual(numero)}
+                  >
+                    {numero}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <Footer />

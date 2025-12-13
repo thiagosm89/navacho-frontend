@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import logomarcaImg from '../assets/logomarca.png'
+import logomarcaImg from '../assets/logomarca_preto.png'
 import './Register.css'
 
 interface EnderecoViaCEP {
@@ -242,11 +242,11 @@ const Register = () => {
           <div className="register-header">
             <div className="register-logo-wrapper">
               <img 
-                src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca.png'} 
-                alt="Navacho Logo" 
+                src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca_preto.png'} 
+                alt="TapaNoVisu Logo" 
                 className="register-logo-image"
               />
-              <span className="register-logo-text">Navacho</span>
+              <span className="register-logo-text">TapaNoVisu</span>
             </div>
             <h1 className="register-title">Criar Conta</h1>
             <p className="register-subtitle">Preencha os dados abaixo para se cadastrar</p>
@@ -480,4 +480,5 @@ const Register = () => {
 }
 
 export default Register
+
 

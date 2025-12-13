@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   padding-top: 60px;
-  /* Base de couro autêntico - mesma da landing page */
-  background: #9D7A4A;
+  /* Fundo quase preto com textura de barbearia */
+  background: #0a0a0a;
   position: relative;
   overflow-x: hidden;
-  box-shadow: inset 0 0 100px rgba(61, 40, 23, 0.3);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
 .register-page::before {
@@ -17,111 +17,41 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* Textura granulada de couro autêntico - mesma da landing page */
+  /* Textura de azulejo clássico de barbearia */
   background-image: 
-    /* Textura granulada uniforme - padrão pebbled/grainy muito fino */
+    /* Padrão de linhas horizontais sutis (simulando azulejos) */
     repeating-linear-gradient(
       0deg,
-      transparent 0px,
-      transparent 0.5px,
-      rgba(101, 67, 33, 0.12) 0.5px,
-      rgba(101, 67, 33, 0.12) 1px,
-      transparent 1px,
-      transparent 1.5px,
-      rgba(107, 71, 35, 0.1) 1.5px,
-      rgba(107, 71, 35, 0.1) 2px,
-      transparent 2px,
-      transparent 2.5px,
-      rgba(95, 63, 31, 0.08) 2.5px,
-      rgba(95, 63, 31, 0.08) 3px,
-      transparent 3px,
-      transparent 4px
+      transparent,
+      transparent 40px,
+      rgba(255, 255, 255, 0.03) 40px,
+      rgba(255, 255, 255, 0.03) 41px,
+      transparent 41px,
+      transparent 80px
     ),
+    /* Padrão de linhas verticais sutis */
     repeating-linear-gradient(
       90deg,
-      transparent 0px,
-      transparent 0.5px,
-      rgba(101, 67, 33, 0.1) 0.5px,
-      rgba(101, 67, 33, 0.1) 1px,
-      transparent 1px,
-      transparent 1.5px,
-      rgba(107, 71, 35, 0.08) 1.5px,
-      rgba(107, 71, 35, 0.08) 2px,
-      transparent 2px,
-      transparent 2.5px,
-      rgba(95, 63, 31, 0.06) 2.5px,
-      rgba(95, 63, 31, 0.06) 3px,
-      transparent 3px,
-      transparent 4px
-    ),
-    /* Textura diagonal muito sutil para profundidade */
-    repeating-linear-gradient(
-      45deg,
-      transparent 0px,
-      transparent 6px,
-      rgba(101, 67, 33, 0.06) 6px,
-      rgba(101, 67, 33, 0.06) 7px,
-      transparent 7px,
-      transparent 12px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent 0px,
-      transparent 6px,
-      rgba(107, 71, 35, 0.05) 6px,
-      rgba(107, 71, 35, 0.05) 7px,
-      transparent 7px,
-      transparent 12px
-    ),
-    /* Pontos de textura granulada - distribuídos organicamente */
-    radial-gradient(circle at 8% 12%, rgba(95, 63, 31, 0.25) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 23% 28%, rgba(101, 67, 33, 0.22) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 38% 18%, rgba(95, 63, 31, 0.25) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 52% 32%, rgba(107, 71, 35, 0.2) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 67% 22%, rgba(101, 67, 33, 0.23) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 82% 38%, rgba(95, 63, 31, 0.24) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 15% 48%, rgba(107, 71, 35, 0.25) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 31% 62%, rgba(101, 67, 33, 0.21) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 46% 52%, rgba(95, 63, 31, 0.23) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 61% 68%, rgba(107, 71, 35, 0.24) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 76% 58%, rgba(101, 67, 33, 0.22) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 19% 78%, rgba(95, 63, 31, 0.21) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 54% 82%, rgba(107, 71, 35, 0.25) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 88% 68%, rgba(101, 67, 33, 0.2) 0.3px, transparent 0.3px),
-    radial-gradient(circle at 42% 88%, rgba(95, 63, 31, 0.22) 0.3px, transparent 0.3px),
-    /* Variações sutis de cor para simular irregularidades naturais */
-    radial-gradient(ellipse 180px 140px at 28% 38%, rgba(139, 111, 78, 0.15) 0%, transparent 35%),
-    radial-gradient(ellipse 160px 120px at 64% 58%, rgba(101, 67, 33, 0.18) 0%, transparent 32%),
-    radial-gradient(ellipse 140px 170px at 48% 72%, rgba(107, 71, 35, 0.12) 0%, transparent 36%),
-    radial-gradient(ellipse 200px 150px at 72% 28%, rgba(139, 111, 78, 0.14) 0%, transparent 38%),
-    /* Rugas muito sutis e irregulares */
-    repeating-linear-gradient(
-      12deg,
       transparent,
-      transparent 140px,
-      rgba(95, 63, 31, 0.1) 140px,
-      rgba(95, 63, 31, 0.1) 141px,
-      transparent 141px,
-      transparent 280px
+      transparent 40px,
+      rgba(255, 255, 255, 0.03) 40px,
+      rgba(255, 255, 255, 0.03) 41px,
+      transparent 41px,
+      transparent 80px
     ),
-    repeating-linear-gradient(
-      -18deg,
-      transparent,
-      transparent 160px,
-      rgba(101, 67, 33, 0.08) 160px,
-      rgba(101, 67, 33, 0.08) 161px,
-      transparent 161px,
-      transparent 320px
-    );
+    /* Textura granulada sutil */
+    radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.02) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.02) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.02) 0.5px, transparent 0.5px);
   background-size: 
-    2px 2px, 2px 2px,
-    4px 4px, 4px 4px,
-    1.5% 1.5%, 1.7% 1.7%, 1.3% 1.3%, 1.9% 1.9%, 1.6% 1.6%, 2% 2%, 1.4% 1.4%, 1.8% 1.8%, 1.5% 1.5%, 2.1% 2.1%, 1.2% 1.2%, 2.2% 2.2%, 1.1% 1.1%, 2.3% 2.3%, 1% 1%,
-    35% 30%, 33% 28%, 31% 32%, 37% 29%,
-    400px 400px, 450px 450px;
+    20px 20px,
+    20px 20px,
+    100% 100%,
+    100% 100%,
+    100% 100%;
   pointer-events: none;
-  opacity: 0.8;
-  mix-blend-mode: multiply;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
   z-index: 0;
 }
 
@@ -132,41 +62,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* Efeito de vignette e iluminação central - mesma da landing page */
-  background: 
-    /* Vignette escuro nas bordas - efeito forte */
-    radial-gradient(
-      ellipse at center,
-      transparent 0%,
-      transparent 25%,
-      rgba(61, 40, 23, 0.5) 50%,
-      rgba(61, 40, 23, 0.75) 70%,
-      rgba(61, 40, 23, 0.9) 85%,
-      rgba(61, 40, 23, 0.95) 100%
-    ),
-    /* Iluminação central suave e difusa - brilho dourado no centro */
-    radial-gradient(
-      ellipse 1400px 1000px at center,
-      rgba(212, 180, 140, 0.3) 0%,
-      rgba(212, 180, 140, 0.2) 20%,
-      rgba(212, 180, 140, 0.1) 35%,
-      rgba(212, 180, 140, 0.05) 50%,
-      transparent 65%
-    ),
-    /* Variações sutis de cor para profundidade */
-    radial-gradient(
-      ellipse 600px 400px at 35% 45%,
-      rgba(139, 111, 78, 0.1) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      ellipse 500px 350px at 65% 55%,
-      rgba(101, 67, 33, 0.12) 0%,
-      transparent 35%
-    );
+  /* Vignette sutil nas bordas */
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   pointer-events: none;
   opacity: 1;
-  mix-blend-mode: multiply;
   z-index: 0;
 }
 
@@ -181,16 +85,16 @@
 }
 
 .register-container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
   padding: 3rem;
   width: 100%;
   max-width: 700px;
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
   z-index: 1;
 }
@@ -212,43 +116,31 @@
   height: 200px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.4));
+  /* Filtro vintage para dar tom bege/amarelado */
+  filter: sepia(20%) saturate(80%) brightness(110%) contrast(90%);
 }
 
 .register-logo-text {
   font-family: 'Rye', cursive;
   font-size: 3.5rem;
-  color: #FFD700;
+  color: #E8D5B7;
   letter-spacing: 3px;
   font-weight: 400;
-  text-shadow: 
-    4px 4px 10px rgba(0, 0, 0, 0.9),
-    3px 3px 8px rgba(0, 0, 0, 0.8),
-    0 0 40px rgba(255, 215, 0, 0.9),
-    0 0 60px rgba(255, 193, 7, 0.7),
-    0 0 80px rgba(255, 235, 59, 0.5);
-  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.8));
 }
 
 .register-title {
   font-family: 'Rye', cursive;
   font-size: 2rem;
-  color: var(--navacho-branco);
+  color: #E8D5B7;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
   font-weight: 400;
-  text-shadow: 
-    2px 2px 6px rgba(0, 0, 0, 0.8),
-    1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .register-subtitle {
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   font-size: 1rem;
   font-weight: 400;
-  text-shadow: 
-    1px 1px 4px rgba(0, 0, 0, 0.7),
-    0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .register-form {
@@ -258,14 +150,15 @@
 }
 
 .register-error {
-  background-color: rgba(220, 38, 38, 0.1);
-  color: var(--navacho-vermelho-medio);
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid rgba(220, 38, 38, 0.2);
+  background-color: rgba(220, 38, 38, 0.15);
+  color: #ff6b6b;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(220, 38, 38, 0.3);
   font-size: 0.9rem;
   text-align: center;
   font-weight: 500;
+  backdrop-filter: blur(10px);
 }
 
 .form-section {
@@ -281,7 +174,7 @@
 .section-title {
   font-family: 'Rye', cursive;
   font-size: 1.5rem;
-  color: var(--navacho-branco);
+  color: #E8D5B7;
   margin: 0 0 0.5rem 0;
   letter-spacing: 1px;
   font-weight: 400;
@@ -314,72 +207,72 @@
 }
 
 .form-group label {
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   font-weight: 600;
   font-size: 0.95rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .form-group input {
-  padding: 0.875rem 1rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   font-size: 1rem;
   font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
-  color: var(--navacho-branco);
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: var(--tapanovisu-branco);
 }
 
 .form-group input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--navacho-verde-claro);
+  border-color: rgba(255, 255, 255, 0.4);
   box-shadow: 
-    0 0 0 3px rgba(64, 145, 108, 0.3),
-    0 0 20px rgba(64, 145, 108, 0.2);
-  background-color: rgba(255, 255, 255, 0.2);
+    0 0 0 3px rgba(255, 255, 255, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .form-group input:disabled {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   cursor: not-allowed;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .loading-cep {
   position: absolute;
   right: 1rem;
   top: 2.5rem;
-  color: var(--navacho-verde-claro);
+  color: var(--tapanovisu-branco);
   font-size: 0.85rem;
   font-style: italic;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn-register {
-  background-color: var(--navacho-verde-medio);
-  color: var(--navacho-branco);
+  background-color: var(--tapanovisu-branco);
+  color: var(--tapanovisu-preto);
   border: none;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-family: 'Inter', sans-serif;
   margin-top: 0.5rem;
 }
 
 .btn-register:hover:not(:disabled) {
-  background-color: var(--navacho-verde-escuro);
+  background-color: var(--tapanovisu-cinza-claro);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(45, 106, 79, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .btn-register:disabled {
@@ -397,25 +290,20 @@
 }
 
 .register-link {
-  color: var(--navacho-verde-claro);
+  color: var(--tapanovisu-branco);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
-  text-shadow: 
-    1px 1px 3px rgba(0, 0, 0, 0.6),
-    0 0 10px rgba(64, 145, 108, 0.5);
+  border-bottom: 1px solid transparent;
 }
 
 .register-link:hover {
-  color: var(--navacho-verde-suave);
-  text-decoration: underline;
-  text-shadow: 
-    1px 1px 4px rgba(0, 0, 0, 0.7),
-    0 0 15px rgba(82, 183, 136, 0.7);
+  color: var(--tapanovisu-branco);
+  border-bottom-color: var(--tapanovisu-branco);
 }
 
 .register-login {
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   font-size: 0.9rem;
   margin: 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);

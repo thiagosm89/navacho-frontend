@@ -1,38 +1,22 @@
 :root {
-  /* Paleta de Cores Gaúcha - Navacho */
-  /* Baseada nas cores tradicionais do Rio Grande do Sul */
+  /* Paleta de Cores TapaNoVisu */
+  /* Paleta monocromática preto e branco */
   
-  /* Verde Gaúcho - cor principal */
-  --navacho-verde-escuro: #1a4d2e;
-  --navacho-verde-medio: #2d6a4f;
-  --navacho-verde-claro: #40916c;
-  --navacho-verde-suave: #52b788;
+  /* Preto e Branco - cores principais */
+  --tapanovisu-preto: #000000;
+  --tapanovisu-branco: #ffffff;
   
-  /* Vermelho Gaúcho - cor secundária */
-  --navacho-vermelho-escuro: #8b1a1a;
-  --navacho-vermelho-medio: #b91c1c;
-  --navacho-vermelho-claro: #dc2626;
+  /* Cinzas para variações sutis */
+  --tapanovisu-cinza-escuro: #1a1a1a;
+  --tapanovisu-cinza-medio: #4a4a4a;
+  --tapanovisu-cinza-claro: #cccccc;
   
-  /* Marrom/Couro - cor terciária */
-  --navacho-marrom-escuro: #3d2817;
-  --navacho-marrom-medio: #5c3d2e;
-  --navacho-marrom-claro: #8b6f47;
-  --navacho-couro: #a0826d;
-  
-  /* Bege/Creme - cor neutra */
-  --navacho-bege-escuro: #d4a574;
-  --navacho-bege-medio: #e9c46a;
-  --navacho-bege-claro: #f4e4c1;
-  --navacho-creme: #fef9f3;
-  
-  /* Preto e Branco */
-  --navacho-preto: #0d0d0d;
+  /* Variáveis legadas para compatibilidade (serão removidas gradualmente) */
+  --navacho-preto: #000000;
   --navacho-branco: #ffffff;
-  
-  /* Cinzas */
-  --navacho-cinza-escuro: #2d2d2d;
-  --navacho-cinza-medio: #6b6b6b;
-  --navacho-cinza-claro: #e5e5e5;
+  --navacho-cinza-escuro: #1a1a1a;
+  --navacho-cinza-medio: #4a4a4a;
+  --navacho-cinza-claro: #cccccc;
 }
 
 * {
@@ -47,8 +31,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--navacho-creme);
-  color: var(--navacho-preto);
+  background-color: var(--tapanovisu-branco);
+  color: var(--tapanovisu-preto);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -70,15 +54,15 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--navacho-creme);
+  background: var(--tapanovisu-branco);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--navacho-verde-medio);
+  background: var(--tapanovisu-cinza-medio);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--navacho-verde-escuro);
+  background: var(--tapanovisu-preto);
 }
 

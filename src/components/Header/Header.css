@@ -1,6 +1,5 @@
 .header {
-  background-color: rgba(185, 28, 28, 0.95);
-  backdrop-filter: blur(8px);
+  background-color: #000000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
@@ -9,7 +8,7 @@
   width: 100%;
   z-index: 1000;
   padding: 0;
-  border-bottom: 2px solid rgba(139, 26, 26, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-container {
@@ -48,7 +47,7 @@
 .hamburguer-line {
   width: 100%;
   height: 3px;
-  background-color: var(--navacho-branco);
+  background-color: var(--tapanovisu-branco);
   border-radius: 3px;
   transition: all 0.3s ease;
   transform-origin: center;
@@ -67,12 +66,11 @@
 }
 
 .nav-link {
-  color: var(--navacho-branco);
+  color: var(--tapanovisu-branco);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   padding: 0 1.5rem;
   border-radius: 0;
   display: flex;
@@ -89,15 +87,14 @@
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
-  color: var(--navacho-vermelho-escuro);
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  color: var(--tapanovisu-branco);
 }
 
 
 .btn-primary {
-  background-color: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(5px);
-  color: var(--navacho-branco);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  color: var(--tapanovisu-branco);
   border: 2px solid rgba(255, 255, 255, 0.4);
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -105,19 +102,20 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
   margin: 0.5rem 0;
   height: auto;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Inter', sans-serif;
 }
 
 .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.6);
+  color: var(--tapanovisu-branco);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -147,8 +145,7 @@
     top: 60px;
     left: 0;
     right: 0;
-    background-color: rgba(185, 28, 28, 0.98);
-    backdrop-filter: blur(10px);
+    background-color: #000000;
     flex-direction: column;
     width: 100%;
     gap: 0;

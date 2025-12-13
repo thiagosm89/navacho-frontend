@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import logomarcaImg from '../assets/logomarca.png'
+import logomarcaImg from '../assets/logomarca_preto.png'
 import './Login.css'
 
 const Login = () => {
@@ -77,14 +77,13 @@ const Login = () => {
         <div className="login-header">
           <div className="login-logo-wrapper">
             <img 
-              src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca.png'} 
-              alt="Navacho Logo" 
+              src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca_preto.png'} 
+              alt="TapaNoVisu Logo" 
               className="login-logo-image"
             />
-            <span className="login-logo-text">Navacho</span>
+            <span className="login-logo-text">TapaNoVisu</span>
           </div>
-          <h1 className="login-title">Bem-vindo</h1>
-          <p className="login-subtitle">Entre com suas credenciais para continuar</p>
+          <p className="login-subtitle">Entre na sua conta para continuar</p>
         </div>
 
         <form className="login-form" onSubmit={handleSubmit}>
@@ -128,29 +127,28 @@ const Login = () => {
             {carregando ? 'Entrando...' : 'Entrar'}
           </button>
 
-            <div className="login-footer">
-              <button
-                type="button"
-                onClick={handleVoltar}
+          <div className="login-footer">
+            <button
+              type="button"
+              onClick={handleVoltar}
+              className="btn-voltar"
+            >
+              ← Voltar
+            </button>
+            <p className="login-register">
+              Não tem uma conta?{' '}
+              <a 
+                href="#"
                 className="login-link"
-                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigate('/cadastro', { state: { from: location.pathname } })
+                }}
               >
-                Voltar
-              </button>
-              <p className="login-register">
-                Não tem uma conta?{' '}
-                <a 
-                  href="#"
-                  className="login-link"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    navigate('/cadastro', { state: { from: location.pathname } })
-                  }}
-                >
-                  Cadastre-se
-                </a>
-              </p>
-            </div>
+                Cadastre-se
+              </a>
+            </p>
+          </div>
         </form>
       </div>
     </div>

@@ -1,31 +1,33 @@
 import { useNavigate } from 'react-router-dom'
-import logomarcaImg from '../../assets/logomarca.png'
+import logomarcaImg from '../../assets/logomarca_preto.png'
+import barbeariaImg from '../../assets/barbearia.jpg'
 import './Hero.css'
 
 const Hero = () => {
   const navigate = useNavigate()
   // Tentar usar a importação, se falhar usar caminho público
-  const logoSrc = typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca.png'
+  const logoSrc = typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca_preto.png'
+  const barbeariaSrc = typeof barbeariaImg === 'string' ? barbeariaImg : '/barbearia.jpg'
   
   return (
-    <section className="hero">
+    <section className="hero" style={{ '--barbearia-bg': `url(${barbeariaSrc})` } as React.CSSProperties}>
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-logo-wrapper">
             <img 
               src={logoSrc} 
-              alt="Navacho Logo" 
+              alt="TapaNoVisu Logo" 
               className="hero-logo"
             />
           </div>
           <h1 className="hero-title">
-            <span className="title-main">Navacho</span>
+            <span className="title-main">TapaNoVisu</span>
           </h1>
           <p className="hero-description">
-            Simplifique o agendamento, gerencie sua barbearia com eficiência e conecte-se com 
-            <strong> clientes</strong> e <strong>fornecedores</strong> em um só lugar. 
-            <strong> Navacho</strong> oferece ferramentas completas para barbeiros e donos de 
-            barbearias crescerem seus negócios, mantendo viva a tradição gaúcha com tecnologia de ponta.
+            A plataforma que conecta você aos melhores barbeiros e barbearias. 
+            <strong> TapaNoVisu</strong> oferece uma experiência completa para quem busca excelência em cuidados do visual. 
+            Agende seus cortes, descubra profissionais de qualidade e encontre quem entende que uma apresentação impecável 
+            é essencial para sua confiança e presença.
           </p>
           <div className="hero-buttons">
             <button 
@@ -46,7 +48,7 @@ const Hero = () => {
           <div className="hero-image-wrapper">
             <img 
               src={logoSrc} 
-              alt="Navacho - Plataforma de Agendamento" 
+              alt="TapaNoVisu - Transformando Visuais com Excelência" 
               className="hero-image-main"
             />
           </div>
