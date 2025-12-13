@@ -80,6 +80,10 @@
     gap: 2rem;
   }
 
+  .footer-section:first-child {
+    display: none;
+  }
+
   .footer-title {
     font-size: 1.35rem;
   }
