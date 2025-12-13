@@ -5,10 +5,10 @@ const About = () => {
     <section id="sobre" className="about">
       <div className="about-container">
         <div className="about-content">
-          <h2 className="about-title">Sobre o TapaNoVisu</h2>
+          <h2 className="about-title">Sobre o NaRégua</h2>
           <div className="about-text">
             <p className="about-paragraph">
-              O <strong>TapaNoVisu</strong> nasceu da paixão por transformar visuais 
+              O <strong>NaRégua</strong> nasceu da paixão por transformar visuais 
               e elevar a autoestima através de cuidados de excelência. Acreditamos que um bom visual 
               não é apenas estética, é confiança, é identidade, é expressão pessoal.
             </p>
@@ -19,7 +19,7 @@ const About = () => {
               das barbearias, criando uma rede completa que fortalece toda a cadeia de cuidados do visual.
             </p>
             <p className="about-paragraph">
-              Com o TapaNoVisu, você tem em mãos uma ferramenta poderosa para encontrar profissionais 
+              Com o NaRégua, você tem em mãos uma ferramenta poderosa para encontrar profissionais 
               que entendem que cada corte é único, cada estilo é pessoal, e que transformar o visual 
               é transformar sua confiança e autoestima.
             </p>

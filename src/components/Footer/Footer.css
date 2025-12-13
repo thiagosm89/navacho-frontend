@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--tapanovisu-preto);
-  color: var(--tapanovisu-branco);
+  background-color: var(--naregua-preto);
+  color: var(--naregua-branco);
   padding: 3rem 2rem 1.5rem;
   position: relative;
 }
@@ -63,24 +63,24 @@
 }
 
 .footer-links li {
-  color: var(--tapanovisu-cinza-claro);
+  color: var(--naregua-cinza-claro);
 }
 
 .footer-links a {
-  color: var(--tapanovisu-cinza-claro);
+  color: var(--naregua-cinza-claro);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--tapanovisu-branco);
+  color: var(--naregua-branco);
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--tapanovisu-cinza-escuro);
+  border-top: 1px solid var(--naregua-cinza-escuro);
   padding-top: 1.5rem;
   text-align: center;
-  color: var(--tapanovisu-cinza-medio);
+  color: var(--naregua-cinza-medio);
   font-size: 0.9rem;
 }
 

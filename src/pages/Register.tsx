@@ -243,7 +243,7 @@ const Register = () => {
             <div className="register-logo-wrapper">
               <img 
                 src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca_preto.png'} 
-                alt="TapaNoVisu Logo" 
+                alt="NaRégua Logo" 
                 className="register-logo-image"
               />
             </div>

@@ -9,7 +9,7 @@ const Logo = () => {
     <div className="logo">
       <img 
         src={logoSrc} 
-        alt="TapaNoVisu Logo" 
+        alt="NaRégua Logo" 
         className="logo-image"
       />
     </div>

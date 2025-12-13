@@ -1,7 +1,7 @@
 .about {
   padding: 5rem 2rem;
   background: #0a0a0a;
-  color: var(--tapanovisu-branco);
+  color: var(--naregua-branco);
   position: relative;
   overflow: hidden;
 }
@@ -106,7 +106,7 @@
 }
 
 .about-paragraph strong {
-  color: var(--tapanovisu-branco);
+  color: var(--naregua-branco);
   font-weight: 700;
 }
 

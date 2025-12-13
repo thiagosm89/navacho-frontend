@@ -1,6 +1,6 @@
-# TapaNoVisu - Frontend
+# NaRégua - Frontend
 
-Frontend da plataforma TapaNoVisu desenvolvido em React + TypeScript + Vite.
+Frontend da plataforma NaRégua desenvolvido em React + TypeScript + Vite.
 
 ## 🎨 Paleta de Cores
 
@@ -16,7 +16,7 @@ A paleta de cores utiliza tons de preto e branco, criando uma identidade visual 
 ### Cor Vintage para Títulos e Logos
 - **Bege Vintage**: `#E8D5B7` - **IMPORTANTE**: Esta cor deve ser usada em:
   - **Todos os títulos principais** que usam a fonte `Rye`
-  - **Nome do site "TapaNoVisu"** em todas as logos
+  - **Nome do site "NaRégua"** em todas as logos
   - **Textos de logo** em todas as páginas (login, register, etc.)
   
   Esta cor vintage adiciona um toque elegante e diferenciado aos elementos principais, evitando que tudo fique apenas em branco.
@@ -85,7 +85,7 @@ O design utiliza uma paleta monocromática (preto e branco) com texturas de barb
 
 **SEMPRE usar a cor `#E8D5B7` (bege vintage) para:**
 - Títulos principais com fonte `Rye`
-- Nome do site "TapaNoVisu" em componentes de logo
+- Nome do site "NaRégua" em componentes de logo
 - Textos de logo em páginas de login, register e outras páginas
 - Qualquer elemento que use a fonte `Rye` em fundos escuros
 
@@ -94,4 +94,4 @@ O design utiliza uma paleta monocromática (preto e branco) com texturas de barb
 - Nome do site em logos
 - Textos de logo
 
-Esta regra garante consistência visual e identidade única da marca TapaNoVisu.
+Esta regra garante consistência visual e identidade única da marca NaRégua.

@@ -1,18 +1,18 @@
 .feature-card {
-  background-color: var(--tapanovisu-branco);
+  background-color: var(--naregua-branco);
   padding: 2.5rem;
   border-radius: 16px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 2px solid var(--tapanovisu-cinza-claro);
-  border-top: 4px solid var(--tapanovisu-preto);
+  border: 2px solid var(--naregua-cinza-claro);
+  border-top: 4px solid var(--naregua-preto);
   cursor: pointer;
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  border-color: var(--tapanovisu-preto);
+  border-color: var(--naregua-preto);
   background-color: rgba(0, 0, 0, 0.02);
 }
 
@@ -25,14 +25,14 @@
 .feature-title {
   font-family: 'Rye', cursive;
   font-size: 2rem;
-  color: var(--tapanovisu-preto);
+  color: var(--naregua-preto);
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
 
 .feature-description {
   font-size: 1.1rem;
-  color: var(--tapanovisu-cinza-medio);
+  color: var(--naregua-cinza-medio);
   line-height: 1.7;
 }
 

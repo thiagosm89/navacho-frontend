@@ -74,7 +74,7 @@ const Barbearias = () => {
         `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&addressdetails=1&accept-language=pt-BR`,
         {
           headers: {
-            'User-Agent': 'TapaNoVisu App' // Requerido pelo Nominatim
+            'User-Agent': 'NaRégua App' // Requerido pelo Nominatim
           }
         }
       )

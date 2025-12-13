@@ -20,13 +20,13 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-title">Contato</h4>
             <ul className="footer-links">
-              <li>contato@tapanovisu.com.br</li>
+              <li>contato@naregua.com.br</li>
               <li>(51) 99999-9999</li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 TapaNoVisu. Todos os direitos reservados.</p>
+          <p>&copy; 2024 NaRégua. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

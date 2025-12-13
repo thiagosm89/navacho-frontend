@@ -151,7 +151,7 @@
 }
 
 .form-group label {
-  color: var(--tapanovisu-branco);
+  color: var(--naregua-branco);
   font-weight: 500;
   font-size: 0.9rem;
   letter-spacing: 0.3px;
@@ -166,7 +166,7 @@
   transition: all 0.3s ease;
   background-color: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  color: var(--tapanovisu-branco);
+  color: var(--naregua-branco);
 }
 
 .form-group input::placeholder {
@@ -190,8 +190,8 @@
 
 
 .btn-login {
-  background-color: var(--tapanovisu-branco);
-  color: var(--tapanovisu-preto);
+  background-color: var(--naregua-branco);
+  color: var(--naregua-preto);
   border: none;
   padding: 1rem 2.5rem;
   border-radius: 8px;
@@ -205,7 +205,7 @@
 }
 
 .btn-login:hover:not(:disabled) {
-  background-color: var(--tapanovisu-cinza-claro);
+  background-color: var(--naregua-cinza-claro);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
@@ -225,7 +225,7 @@
 }
 
 .login-link {
-  color: var(--tapanovisu-branco);
+  color: var(--naregua-branco);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -233,8 +233,8 @@
 }
 
 .login-link:hover {
-  color: var(--tapanovisu-branco);
-  border-bottom-color: var(--tapanovisu-branco);
+  color: var(--naregua-branco);
+  border-bottom-color: var(--naregua-branco);
 }
 
 .login-register {

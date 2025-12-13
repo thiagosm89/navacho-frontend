@@ -66,7 +66,7 @@ const Login = () => {
           <div className="login-logo-wrapper">
             <img 
               src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca_preto.png'} 
-              alt="TapaNoVisu Logo" 
+              alt="NaRégua Logo" 
               className="login-logo-image"
             />
           </div>

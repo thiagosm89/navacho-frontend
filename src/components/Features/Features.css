@@ -1,6 +1,6 @@
 .features {
   padding: 5rem 2rem;
-  background-color: var(--tapanovisu-branco);
+  background-color: var(--naregua-branco);
 }
 
 .features-container {
@@ -16,14 +16,14 @@
 .features-title {
   font-family: 'Rye', cursive;
   font-size: 3.5rem;
-  color: var(--tapanovisu-preto);
+  color: var(--naregua-preto);
   letter-spacing: 3px;
   margin-bottom: 1rem;
 }
 
 .features-subtitle {
   font-size: 1.25rem;
-  color: var(--tapanovisu-cinza-medio);
+  color: var(--naregua-cinza-medio);
   max-width: 700px;
   margin: 0 auto;
 }

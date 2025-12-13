@@ -1,22 +1,22 @@
-# Paleta de Cores - TapaNoVisu
+# Paleta de Cores - NaRégua
 
 ## Descrição
-Paleta de cores monocromática preto e branco, combinando com a identidade visual minimalista e elegante da logomarca do TapaNoVisu.
+Paleta de cores monocromática preto e branco, combinando com a identidade visual minimalista e elegante da logomarca do NaRégua.
 
 ## Cores Principais
 
 ### Preto e Branco
-- **Preto** (`--tapanovisu-preto`): `#000000`
+- **Preto** (`--naregua-preto`): `#000000`
   - Uso: Fundos principais, textos em fundos claros, elementos de destaque, fundo da logomarca
-- **Branco** (`--tapanovisu-branco`): `#ffffff`
+- **Branco** (`--naregua-branco`): `#ffffff`
   - Uso: Textos em fundos escuros, elementos de contraste, backgrounds claros
 
 ### Cinzas
-- **Cinza Escuro** (`--tapanovisu-cinza-escuro`): `#1a1a1a`
+- **Cinza Escuro** (`--naregua-cinza-escuro`): `#1a1a1a`
   - Uso: Elementos estruturais, bordas em fundos escuros
-- **Cinza Médio** (`--tapanovisu-cinza-medio`): `#4a4a4a`
+- **Cinza Médio** (`--naregua-cinza-medio`): `#4a4a4a`
   - Uso: Textos secundários, placeholders, elementos terciários
-- **Cinza Claro** (`--tapanovisu-cinza-claro`): `#cccccc`
+- **Cinza Claro** (`--naregua-cinza-claro`): `#cccccc`
   - Uso: Bordas sutis, separadores, textos em fundos escuros
 
 ## Inspiração
@@ -35,16 +35,16 @@ A paleta monocromática foi escolhida para:
 ## Combinações Recomendadas
 
 ### Combinação Principal
-- Fundo: Branco (`--tapanovisu-branco`)
-- Texto: Preto (`--tapanovisu-preto`)
-- Destaques: Preto (`--tapanovisu-preto`)
+- Fundo: Branco (`--naregua-branco`)
+- Texto: Preto (`--naregua-preto`)
+- Destaques: Preto (`--naregua-preto`)
 
 ### Combinação de Contraste
-- Fundo: Preto (`--tapanovisu-preto`)
-- Texto: Branco (`--tapanovisu-branco`)
-- Destaques: Branco (`--tapanovisu-branco`)
+- Fundo: Preto (`--naregua-preto`)
+- Texto: Branco (`--naregua-branco`)
+- Destaques: Branco (`--naregua-branco`)
 
 ### Combinação Suave
-- Fundo: Branco (`--tapanovisu-branco`)
-- Texto: Cinza Médio (`--tapanovisu-cinza-medio`)
-- Destaques: Preto (`--tapanovisu-preto`)
+- Fundo: Branco (`--naregua-branco`)
+- Texto: Cinza Médio (`--naregua-cinza-medio`)
+- Destaques: Preto (`--naregua-preto`)
