@@ -6,25 +6,21 @@ const Features = () => {
     icon: string
     title: string
     description: string
-    color: 'verde' | 'marrom' | 'vermelho'
   }> = [
     {
       icon: '✂️',
       title: 'Para Barbeiros',
-      description: 'Gerencie sua agenda, clientes e serviços de forma simples e eficiente. Aumente sua produtividade e organize seu negócio com ferramentas desenvolvidas especialmente para profissionais que valorizam a excelência.',
-      color: 'verde' as const
+      description: 'Gerencie sua agenda, clientes e serviços de forma simples e eficiente. Aumente sua produtividade e organize seu negócio com ferramentas desenvolvidas especialmente para profissionais que valorizam a excelência.'
     },
     {
       icon: '👤',
       title: 'Para Clientes',
-      description: 'Agende seus cortes e serviços com facilidade. Encontre os melhores barbeiros e barbearias que entendem que um bom visual é essencial. Transforme seu estilo e eleve sua confiança.',
-      color: 'marrom' as const
+      description: 'Agende seus cortes e serviços com facilidade. Encontre os melhores barbeiros e barbearias que entendem que um bom visual é essencial. Transforme seu estilo e eleve sua confiança.'
     },
     {
       icon: '📦',
       title: 'Para Fornecedores',
-      description: 'Conecte-se diretamente com barbearias e barbeiros de qualidade. Expanda seu mercado, aumente suas vendas e fortaleça relacionamentos através da nossa plataforma.',
-      color: 'vermelho' as const
+      description: 'Conecte-se diretamente com barbearias e barbeiros de qualidade. Expanda seu mercado, aumente suas vendas e fortaleça relacionamentos através da nossa plataforma.'
     }
   ]
 

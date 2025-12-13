@@ -5,38 +5,13 @@
   text-align: center;
   transition: all 0.3s ease;
   border: 2px solid var(--tapanovisu-cinza-claro);
+  border-top: 4px solid var(--tapanovisu-preto);
   cursor: pointer;
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  border-color: var(--tapanovisu-preto);
-}
-
-.feature-card--verde {
-  border-top: 4px solid var(--tapanovisu-preto);
-}
-
-.feature-card--verde:hover {
-  border-color: var(--tapanovisu-preto);
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-.feature-card--marrom {
-  border-top: 4px solid var(--tapanovisu-preto);
-}
-
-.feature-card--marrom:hover {
-  border-color: var(--tapanovisu-preto);
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-.feature-card--vermelho {
-  border-top: 4px solid var(--tapanovisu-preto);
-}
-
-.feature-card--vermelho:hover {
   border-color: var(--tapanovisu-preto);
   background-color: rgba(0, 0, 0, 0.02);
 }

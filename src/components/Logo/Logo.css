@@ -44,6 +44,7 @@
   .footer .logo-image {
     height: 130px;
     padding: 1rem;
+    filter: none;
   }
 
   .footer .logo-text {

@@ -10,13 +10,6 @@
   --tapanovisu-cinza-escuro: #1a1a1a;
   --tapanovisu-cinza-medio: #4a4a4a;
   --tapanovisu-cinza-claro: #cccccc;
-  
-  /* Variáveis legadas para compatibilidade (serão removidas gradualmente) */
-  --navacho-preto: #000000;
-  --navacho-branco: #ffffff;
-  --navacho-cinza-escuro: #1a1a1a;
-  --navacho-cinza-medio: #4a4a4a;
-  --navacho-cinza-claro: #cccccc;
 }
 
 * {
@@ -31,8 +24,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tapanovisu-branco);
-  color: var(--tapanovisu-preto);
+  background-color: var(--tapanovisu-preto);
+  color: var(--tapanovisu-branco);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -54,7 +47,7 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--tapanovisu-branco);
+  background: var(--tapanovisu-preto);
 }
 
 ::-webkit-scrollbar-thumb {
