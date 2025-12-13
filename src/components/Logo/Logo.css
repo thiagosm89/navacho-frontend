@@ -25,14 +25,6 @@
   transform: scale(1.05);
 }
 
-.logo-text {
-  font-family: 'Rye', cursive;
-  font-size: 2.2rem;
-  color: #E8D5B7;
-  letter-spacing: 2px;
-  font-weight: 400;
-}
-
 /* Estilo específico para logo no footer em telas maiores */
 @media (min-width: 769px) {
   .footer .logo {
@@ -46,30 +38,17 @@
     padding: 1rem;
     filter: none;
   }
-
-  .footer .logo-text {
-    font-size: 2.2rem;
-  }
 }
 
 @media (max-width: 968px) {
   .logo-image {
     height: 55px;
   }
-
-  .logo-text {
-    font-size: 1.9rem;
-  }
 }
 
 @media (max-width: 768px) {
   .logo-image {
     height: 45px;
-  }
-
-  .logo-text {
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
   }
 }
 
@@ -80,10 +59,5 @@
 
   .logo-image {
     height: 40px;
-  }
-
-  .logo-text {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
   }
 }
