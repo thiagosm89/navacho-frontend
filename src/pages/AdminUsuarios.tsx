@@ -13,7 +13,7 @@ const AdminUsuarios = () => {
   const [erro, setErro] = useState('')
   const [busca, setBusca] = useState('')
   const [filtroPapel, setFiltroPapel] = useState<PapelUsuario | ''>('')
-  const [filtroAtivo, setFiltroAtivo] = useState<boolean | ''>('')
+  const [filtroAtivo, setFiltroAtivo] = useState<string>('')
   const [pagina, setPagina] = useState(1)
   const [totalPaginas, setTotalPaginas] = useState(1)
   const [total, setTotal] = useState(0)
@@ -60,7 +60,7 @@ const AdminUsuarios = () => {
         params.papel = filtroPapel
       }
       if (filtroAtivo !== '') {
-        params.ativo = filtroAtivo
+        params.ativo = filtroAtivo === 'true'
       }
 
       const dados: ListaUsuariosResponse = await usuarioService.listarUsuarios(params)
@@ -250,7 +250,7 @@ const AdminUsuarios = () => {
             <select
               value={filtroAtivo}
               onChange={(e) => {
-                setFiltroAtivo(e.target.value === '' ? '' : e.target.value === 'true')
+                setFiltroAtivo(e.target.value)
                 setPagina(1)
               }}
               className="select-filtro"
