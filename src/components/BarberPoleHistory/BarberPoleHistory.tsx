@@ -37,13 +37,13 @@ const BarberPoleHistory = () => {
                 As cores tradicionais do Barber Pole têm significados históricos profundos:
               </p>
               <ul className="barber-pole-history-list">
-                <li>
+                <li className="color-item-red">
                   <strong>Vermelho:</strong> Representava o sangue das sangrias realizadas pelos barbeiros-cirurgiões.
                 </li>
-                <li>
+                <li className="color-item-white">
                   <strong>Branco:</strong> Simbolizava as bandagens usadas nos procedimentos médicos.
                 </li>
-                <li>
+                <li className="color-item-blue">
                   <strong>Azul:</strong> Adicionado posteriormente, representa as veias durante os procedimentos de sangria.
                 </li>
               </ul>

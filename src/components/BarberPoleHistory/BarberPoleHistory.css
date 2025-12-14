@@ -226,17 +226,58 @@
 .barber-pole-history-list li {
   padding: 1rem;
   margin-bottom: 0.75rem;
-  background: rgba(255, 255, 255, 0.02);
   border-left: 3px solid #E8D5B7;
   border-radius: 4px;
   padding-left: 1.5rem;
   transition: all 0.3s ease;
 }
 
-.barber-pole-history-list li:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-left-color: rgba(232, 213, 183, 0.8);
+.color-item-red {
+  background: rgba(220, 38, 38, 0.2);
+  border-left-color: #dc2626;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.color-item-red:hover {
+  background: rgba(220, 38, 38, 0.3);
+  border-left-color: #b91c1c;
   transform: translateX(5px);
+}
+
+.color-item-red strong {
+  color: #fca5a5;
+}
+
+.color-item-white {
+  background: rgba(255, 255, 255, 0.12);
+  border-left-color: #ffffff;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.color-item-white:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-left-color: rgba(255, 255, 255, 0.9);
+  transform: translateX(5px);
+}
+
+.color-item-white strong {
+  color: #ffffff;
+}
+
+.color-item-blue {
+  background: rgba(37, 99, 235, 0.2);
+  border-left-color: #2563eb;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.color-item-blue:hover {
+  background: rgba(37, 99, 235, 0.3);
+  border-left-color: #1e40af;
+  transform: translateX(5px);
+}
+
+.color-item-blue strong {
+  color: #93c5fd;
 }
 
 .barber-pole-history-list li strong {
