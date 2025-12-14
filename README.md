@@ -44,23 +44,83 @@ A aplicação está organizada em componentes modulares e reutilizáveis:
 ```
 src/
 ├── components/
-│   ├── About/          # Seção sobre o Navacho
+│   ├── About/          # Seção sobre o NaRégua
 │   ├── FeatureCard/    # Card de funcionalidade
 │   ├── Features/       # Seção de funcionalidades
 │   ├── Footer/         # Rodapé
 │   ├── Header/         # Cabeçalho com navegação
 │   ├── Hero/           # Seção principal (hero)
+│   ├── LoadingBarber/  # Componente de loading padrão do sistema
 │   └── Logo/           # Componente de logo
 ├── pages/
 │   └── LandingPage/    # Página principal
 └── assets/
-    └── logomarca.png   # Logo do Navacho
+    └── logomarca_preto.png   # Logo do NaRégua
+```
+
+## ⏳ Componente de Loading Padrão
+
+**IMPORTANTE**: Sempre que uma tela precisar exibir um estado de carregamento (loading), deve-se usar o componente `LoadingBarber`.
+
+### Uso do LoadingBarber
+
+```tsx
+import LoadingBarber from '../components/LoadingBarber/LoadingBarber'
+
+// Exemplo de uso
+if (carregando) {
+  return (
+    <LayoutAdmin>
+      <div className="loading-container">
+        <LoadingBarber size="large" text="Carregando dados..." />
+      </div>
+    </LayoutAdmin>
+  )
+}
+```
+
+### Propriedades
+
+- `size` (opcional): `'small' | 'medium' | 'large'` - Tamanho do símbolo de loading (padrão: `'medium'`)
+- `text` (opcional): `string` - Texto exibido abaixo do símbolo de loading
+
+### Características
+
+- **Símbolo**: Poste de barbearia animado (barber pole) com espiral em movimento
+- **Cores**: Vermelho (#dc2626), Branco (#ffffff), Azul (#2563eb)
+- **Animação**: Espiral contínua simulando o movimento tradicional do poste de barbearia
+- **Responsivo**: Adapta-se automaticamente ao tamanho especificado
+
+### Regras para IA
+
+**SEMPRE usar `LoadingBarber` quando:**
+- Uma página estiver carregando dados da API
+- Houver processamento assíncrono
+- Precisar exibir um estado de espera
+- Qualquer situação que requeira feedback visual de carregamento
+
+**NÃO criar novos componentes de loading** - sempre usar o `LoadingBarber` existente para manter consistência visual em todo o sistema.
+
+**Exemplo de implementação padrão:**
+
+```tsx
+const [carregando, setCarregando] = useState(true)
+
+if (carregando) {
+  return (
+    <LayoutAdmin> {/* ou outro layout apropriado */}
+      <div className="loading-container">
+        <LoadingBarber size="large" text="Carregando..." />
+      </div>
+    </LayoutAdmin>
+  )
+}
 ```
 
 ## 🎯 Funcionalidades da Landing Page
 
 - **Hero Section**: Apresentação principal com logo e call-to-action
-- **Features**: Explicação de como o Navacho conecta barbeiros, clientes e fornecedores
+- **Features**: Explicação de como o NaRégua conecta barbeiros, clientes e fornecedores
 - **About**: Informações sobre a plataforma, missão, visão e valores
 - **Footer**: Links rápidos e informações de contato
 

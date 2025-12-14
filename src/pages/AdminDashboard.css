@@ -1,0 +1,287 @@
+.admin-dashboard {
+  width: 100%;
+}
+
+.dashboard-loading,
+.dashboard-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 4rem);
+  color: var(--naregua-branco);
+}
+
+
+.dashboard-error {
+  color: #ff6b6b;
+}
+
+.dashboard-container {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+.dashboard-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-family: 'Rye', cursive;
+  font-size: 2.5rem;
+  color: #E8D5B7;
+  margin-bottom: 0.5rem;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.dashboard-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+.dashboard-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: 'Rye', cursive;
+  font-size: 1.75rem;
+  color: #E8D5B7;
+  margin-bottom: 1.5rem;
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.metric-card-ativa {
+  border-left: 4px solid #22c55e;
+}
+
+.metric-card-inativa {
+  border-left: 4px solid #6b7280;
+}
+
+.metric-card-pendente {
+  border-left: 4px solid #f59e0b;
+}
+
+.metric-card-bloqueada {
+  border-left: 4px solid #ef4444;
+}
+
+.metric-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.metric-card-ativa .metric-icon {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.metric-card-inativa .metric-icon {
+  background: rgba(107, 114, 128, 0.2);
+  color: #6b7280;
+}
+
+.metric-card-pendente .metric-icon {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.metric-card-bloqueada .metric-icon {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.metric-content {
+  flex: 1;
+}
+
+.metric-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--naregua-branco);
+  margin: 0;
+  line-height: 1;
+}
+
+/* Funil de Vendas */
+.funil-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.funil-stage {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.funil-stage:last-child {
+  margin-bottom: 0;
+}
+
+.funil-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.funil-value {
+  color: var(--naregua-branco);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.funil-bar {
+  height: 8px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  transition: width 0.5s ease;
+}
+
+.funil-visitantes .funil-bar {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.funil-leads .funil-bar {
+  background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+}
+
+.funil-agendamentos .funil-bar {
+  background: linear-gradient(90deg, #06b6d4, #0891b2);
+}
+
+.funil-confirmados .funil-bar {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.funil-concluidos .funil-bar {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.funil-cancelados .funil-bar {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+@media (max-width: 968px) {
+  .dashboard-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .metric-card {
+    padding: 1.25rem;
+  }
+
+  .metric-value {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funil-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .metric-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .metric-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .metric-value {
+    font-size: 1.75rem;
+  }
+}
+

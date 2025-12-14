@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
+import { obterPerfisDisponiveis, obterDashboardPadrao } from '../utils/perfilUtils'
+import { PapelUsuario } from '../types/roles'
 import logomarcaImg from '../assets/logomarca_preto.png'
 import './Login.css'
 
@@ -13,6 +15,40 @@ const Login = () => {
   const [erro, setErro] = useState('')
   const [carregando, setCarregando] = useState(false)
 
+  // Verificar se já está logado ao montar o componente
+  useEffect(() => {
+    const token = localStorage.getItem('access_token')
+    const usuarioStr = localStorage.getItem('usuario')
+
+    if (token && usuarioStr) {
+      try {
+        const usuario = JSON.parse(usuarioStr)
+        const perfis = obterPerfisDisponiveis(usuario)
+
+        // Se tiver múltiplos perfis, redirecionar para seleção
+        if (perfis.length > 1) {
+          navigate('/selecionar-perfil', { replace: true })
+          return
+        }
+
+        // Se tiver apenas um perfil, redirecionar para o dashboard
+        if (perfis.length === 1) {
+          navigate(perfis[0].path, { replace: true })
+          return
+        }
+
+        // Fallback: redirecionar para dashboard padrão
+        const papel = usuario.papel as PapelUsuario
+        navigate(obterDashboardPadrao(papel), { replace: true })
+      } catch (error) {
+        // Se houver erro ao parsear, limpar e continuar na tela de login
+        localStorage.removeItem('access_token')
+        localStorage.removeItem('refresh_token')
+        localStorage.removeItem('usuario')
+      }
+    }
+  }, [navigate])
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -20,7 +56,6 @@ const Login = () => {
     setCarregando(true)
 
     try {
-      // TODO: Integrar com API do backend
       const response = await fetch('http://localhost:3000/auth/login', {
         method: 'POST',
         headers: {
@@ -39,16 +74,32 @@ const Login = () => {
       localStorage.setItem('access_token', data.access_token)
       localStorage.setItem('refresh_token', data.refresh_token)
       
-      // Redirecionar para a página anterior ou fallback
-      const from = (location.state as { from?: string })?.from
+      // Salvar informações do usuário
+      if (data.usuario) {
+        localStorage.setItem('usuario', JSON.stringify(data.usuario))
+      }
       
-      // Se veio de outra página (não é a própria página de login), volta para lá
-      if (from && from !== '/login') {
-        navigate(from, { replace: true })
+      // Verificar perfis disponíveis
+      const perfis = obterPerfisDisponiveis(data.usuario)
+      
+      // Se tiver múltiplos perfis, redirecionar para seleção
+      if (perfis.length > 1) {
+        navigate('/selecionar-perfil', { replace: true })
+        return
+      }
+      
+      // Se tiver apenas um perfil, redirecionar direto
+      if (perfis.length === 1) {
+        navigate(perfis[0].path, { replace: true })
+        return
+      }
+      
+      // Fallback: redirecionar para dashboard padrão baseado no papel
+      const papel = data.usuario?.papel as PapelUsuario
+      if (papel) {
+        navigate(obterDashboardPadrao(papel), { replace: true })
       } else {
-        // Tenta voltar no histórico do navegador
-        // Se não houver histórico, vai para barbearias como fallback
-        navigate(-1)
+        navigate('/barbearias', { replace: true })
       }
     } catch (error) {
       setErro(error instanceof Error ? error.message : 'Erro ao fazer login')

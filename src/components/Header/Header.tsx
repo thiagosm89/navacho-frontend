@@ -63,6 +63,23 @@ const Header = () => {
     }
   }
 
+  const handleCuriosidadesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    fecharMenu()
+    const currentPath = window.location.pathname
+    if (currentPath === '/') {
+      // Se já está na landing page, apenas scrolla para a seção
+      const curiosidadesSection = document.getElementById('curiosidades')
+      if (curiosidadesSection) {
+        curiosidadesSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      // Se está em outra página, armazena a seção e navega
+      sessionStorage.setItem('scrollToSection', 'curiosidades')
+      navigate('/')
+    }
+  }
+
   const handleContatoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     fecharMenu()
@@ -98,6 +115,7 @@ const Header = () => {
           </Link>
           <a href="#sobre" className="nav-link" onClick={handleSobreClick}>Sobre</a>
           <a href="#funcionalidades" className="nav-link" onClick={handleFuncionalidadesClick}>Funcionalidades</a>
+          <a href="#curiosidades" className="nav-link" onClick={handleCuriosidadesClick}>Curiosidades</a>
           <Link 
             to="/barbearias"
             className="nav-link" 

@@ -1,0 +1,138 @@
+.loading-barber-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.loading-barber-container.small {
+  gap: 1rem;
+}
+
+.loading-barber-container.large {
+  gap: 2rem;
+}
+
+.barber-pole {
+  position: relative;
+  width: 60px;
+  height: 200px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.loading-barber-container.small .barber-pole {
+  width: 40px;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.loading-barber-container.large .barber-pole {
+  width: 80px;
+  height: 280px;
+  border-radius: 40px;
+}
+
+.barber-pole::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.barber-pole::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.barber-pole-stripe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.barber-pole-red {
+  background: repeating-linear-gradient(
+    135deg,
+    #dc2626 0px,
+    #dc2626 30px,
+    transparent 30px,
+    transparent 60px
+  );
+  background-size: 84.85px 84.85px;
+  animation: barber-pole-spiral 2s linear infinite;
+  z-index: 1;
+}
+
+.barber-pole-white {
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0px,
+    transparent 30px,
+    #ffffff 30px,
+    #ffffff 60px
+  );
+  background-size: 84.85px 84.85px;
+  animation: barber-pole-spiral 2s linear infinite;
+  z-index: 2;
+}
+
+.barber-pole-blue {
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0px,
+    transparent 60px,
+    #2563eb 60px,
+    #2563eb 90px
+  );
+  background-size: 84.85px 84.85px;
+  animation: barber-pole-spiral 2s linear infinite;
+  z-index: 3;
+}
+
+@keyframes barber-pole-spiral {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 84.85px 84.85px;
+  }
+}
+
+.loading-barber-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.loading-barber-container.small .loading-barber-text {
+  font-size: 0.875rem;
+}
+
+.loading-barber-container.large .loading-barber-text {
+  font-size: 1.25rem;
+}

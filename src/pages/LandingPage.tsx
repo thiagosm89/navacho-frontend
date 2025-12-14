@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import Features from '../components/Features/Features'
 import About from '../components/About/About'
+import BarberPoleHistory from '../components/BarberPoleHistory/BarberPoleHistory'
 import Footer from '../components/Footer/Footer'
 import './LandingPage.css'
 
@@ -39,6 +40,7 @@ const LandingPage = () => {
       <Hero />
       <Features />
       <About />
+      <BarberPoleHistory />
       <Footer />
     </div>
   )
