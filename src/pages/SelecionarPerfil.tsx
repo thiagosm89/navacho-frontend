@@ -63,7 +63,7 @@ const SelecionarPerfil = () => {
           <div className="selecionar-perfil-logo">
             <img
               src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca_preto.png'}
-              alt="NaRégua Logo"
+              alt="NaRéguaÍ Logo"
               className="selecionar-perfil-logo-image"
             />
           </div>

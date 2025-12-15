@@ -14,110 +14,343 @@
   gap: 2rem;
 }
 
-.barber-pole {
+.barber-tools {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.loading-barber-container.small .barber-tools {
+  width: 80px;
+  height: 60px;
+}
+
+.loading-barber-container.large .barber-tools {
+  width: 180px;
+  height: 120px;
+}
+
+/* Tesoura */
+.scissors-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.scissors {
   position: relative;
   width: 60px;
-  height: 200px;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 
-    0 0 20px rgba(0, 0, 0, 0.5),
-    inset 0 0 10px rgba(0, 0, 0, 0.3);
-  background: #ffffff;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  height: 40px;
+  transform-origin: center center;
+  animation: scissors-float 2s ease-in-out infinite;
 }
 
-.loading-barber-container.small .barber-pole {
+.loading-barber-container.small .scissors {
   width: 40px;
-  height: 120px;
-  border-radius: 20px;
+  height: 28px;
 }
 
-.loading-barber-container.large .barber-pole {
-  width: 80px;
-  height: 280px;
-  border-radius: 40px;
+.loading-barber-container.large .scissors {
+  width: 90px;
+  height: 60px;
 }
 
-.barber-pole::before {
-  content: '';
+.scissor-blade {
   position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 20px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
-  border-radius: 50%;
-  z-index: 10;
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(90deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.barber-pole::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 20px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
-  border-radius: 50%;
-  z-index: 10;
+.loading-barber-container.small .scissor-blade {
+  width: 14px;
+  height: 2px;
 }
 
-.barber-pole-stripe {
+.loading-barber-container.large .scissor-blade {
+  width: 30px;
+  height: 4px;
+}
+
+.scissor-left {
+  top: 8px;
+  left: 0;
+  transform-origin: right center;
+  animation: scissor-cut-left 0.6s ease-in-out infinite;
+}
+
+.scissor-right {
+  bottom: 8px;
+  left: 0;
+  transform-origin: right center;
+  animation: scissor-cut-right 0.6s ease-in-out infinite;
+}
+
+.loading-barber-container.small .scissor-left {
+  top: 6px;
+}
+
+.loading-barber-container.small .scissor-right {
+  bottom: 6px;
+}
+
+.loading-barber-container.large .scissor-left {
+  top: 12px;
+}
+
+.loading-barber-container.large .scissor-right {
+  bottom: 12px;
+}
+
+.blade-edge {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  border-radius: 2px;
+}
+
+.scissor-pivot {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #475569;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.loading-barber-container.small .scissor-pivot {
+  left: 12px;
+  width: 4px;
+  height: 4px;
+}
+
+.loading-barber-container.large .scissor-pivot {
+  left: 27px;
+  width: 8px;
+  height: 8px;
+}
+
+.scissor-handle {
+  position: absolute;
+  width: 12px;
+  height: 20px;
+  background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.loading-barber-container.small .scissor-handle {
+  width: 8px;
+  height: 14px;
+}
+
+.loading-barber-container.large .scissor-handle {
+  width: 18px;
+  height: 30px;
+}
+
+.scissor-handle-left {
+  right: 0;
   top: 0;
+  border-radius: 0 6px 6px 0;
 }
 
-.barber-pole-red {
-  background: repeating-linear-gradient(
-    135deg,
-    #dc2626 0px,
-    #dc2626 30px,
-    transparent 30px,
-    transparent 60px
-  );
-  background-size: 84.85px 84.85px;
-  animation: barber-pole-spiral 2s linear infinite;
-  z-index: 1;
+.scissor-handle-right {
+  right: 0;
+  bottom: 0;
+  border-radius: 0 6px 6px 0;
 }
 
-.barber-pole-white {
-  background: repeating-linear-gradient(
-    135deg,
-    transparent 0px,
-    transparent 30px,
-    #ffffff 30px,
-    #ffffff 60px
-  );
-  background-size: 84.85px 84.85px;
-  animation: barber-pole-spiral 2s linear infinite;
-  z-index: 2;
+/* Fios de cabelo caindo */
+.hair-strands {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-.barber-pole-blue {
-  background: repeating-linear-gradient(
-    135deg,
-    transparent 0px,
-    transparent 60px,
-    #2563eb 60px,
-    #2563eb 90px
-  );
-  background-size: 84.85px 84.85px;
-  animation: barber-pole-spiral 2s linear infinite;
-  z-index: 3;
+.hair-strand {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(180deg, #1e293b 0%, transparent 100%);
+  border-radius: 1px;
+  opacity: 0;
 }
 
-@keyframes barber-pole-spiral {
+.loading-barber-container.small .hair-strand {
+  width: 1.5px;
+  height: 15px;
+}
+
+.loading-barber-container.large .hair-strand {
+  width: 3px;
+  height: 30px;
+}
+
+.strand-1 {
+  left: 20%;
+  animation: hair-fall 1.2s ease-in infinite;
+  animation-delay: 0s;
+}
+
+.strand-2 {
+  left: 35%;
+  animation: hair-fall 1.2s ease-in infinite;
+  animation-delay: 0.2s;
+}
+
+.strand-3 {
+  left: 50%;
+  animation: hair-fall 1.2s ease-in infinite;
+  animation-delay: 0.4s;
+}
+
+.strand-4 {
+  left: 65%;
+  animation: hair-fall 1.2s ease-in infinite;
+  animation-delay: 0.6s;
+}
+
+/* Pente */
+.comb {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 25px;
+  animation: comb-move 2s ease-in-out infinite;
+}
+
+.loading-barber-container.small .comb {
+  right: -15px;
+  width: 20px;
+  height: 18px;
+}
+
+.loading-barber-container.large .comb {
+  right: -30px;
+  width: 45px;
+  height: 38px;
+}
+
+.comb-teeth {
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.loading-barber-container.small .comb-teeth {
+  gap: 1px;
+}
+
+.loading-barber-container.large .comb-teeth {
+  gap: 3px;
+}
+
+.tooth {
+  flex: 1;
+  height: 12px;
+  background: linear-gradient(180deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 1px 1px 0 0;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.loading-barber-container.small .tooth {
+  height: 8px;
+}
+
+.loading-barber-container.large .tooth {
+  height: 18px;
+}
+
+.comb-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 12px;
+  background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.loading-barber-container.small .comb-handle {
+  width: 6px;
+  height: 8px;
+}
+
+.loading-barber-container.large .comb-handle {
+  width: 12px;
+  height: 18px;
+}
+
+/* Animações */
+@keyframes scissors-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+}
+
+@keyframes scissor-cut-left {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes scissor-cut-right {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes hair-fall {
   0% {
-    background-position: 0% 0%;
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
   }
   100% {
-    background-position: 84.85px 84.85px;
+    opacity: 0;
+    transform: translateY(60px) rotate(10deg);
+  }
+}
+
+@keyframes comb-move {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-50%) translateX(-5px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-50%) translateX(5px) rotate(5deg);
   }
 }
 
@@ -127,12 +360,16 @@
   margin: 0;
   text-align: center;
   font-weight: 500;
+  width: 100%;
+  max-width: 120px;
 }
 
 .loading-barber-container.small .loading-barber-text {
   font-size: 0.875rem;
+  max-width: 80px;
 }
 
 .loading-barber-container.large .loading-barber-text {
   font-size: 1.25rem;
+  max-width: 180px;
 }

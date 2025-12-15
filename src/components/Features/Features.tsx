@@ -28,7 +28,7 @@ const Features = () => {
     <section id="funcionalidades" className="features">
       <div className="features-container">
         <div className="features-header">
-          <h2 className="features-title">Como o NaRégua Transforma</h2>
+          <h2 className="features-title">Como o NaRéguaÍ Transforma</h2>
           <p className="features-subtitle">
             Uma plataforma completa que conecta você aos melhores profissionais e oferece cuidados de excelência
           </p>

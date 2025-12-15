@@ -6,6 +6,11 @@ import Barbearias from './pages/Barbearias'
 import AdminDashboard from './pages/AdminDashboard'
 import AdminUsuarios from './pages/AdminUsuarios'
 import SelecionarPerfil from './pages/SelecionarPerfil'
+import BarbeariaDashboard from './pages/BarbeariaDashboard'
+import CadastroBarbeiros from './pages/CadastroBarbeiros'
+import AgendamentosBarbearia from './pages/AgendamentosBarbearia'
+import EstoqueBarbearia from './pages/EstoqueBarbearia'
+import ServicosBarbearia from './pages/ServicosBarbearia'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
@@ -36,6 +41,46 @@ function App() {
         element={
           <ProtectedRoute>
             <SelecionarPerfil />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/barbearia/dashboard" 
+        element={
+          <ProtectedRoute roles={['ADMIN_BARBEARIA']}>
+            <BarbeariaDashboard />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/barbearia/barbeiros" 
+        element={
+          <ProtectedRoute roles={['ADMIN_BARBEARIA']}>
+            <CadastroBarbeiros />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/barbearia/agendamentos" 
+        element={
+          <ProtectedRoute roles={['ADMIN_BARBEARIA']}>
+            <AgendamentosBarbearia />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/barbearia/estoque" 
+        element={
+          <ProtectedRoute roles={['ADMIN_BARBEARIA']}>
+            <EstoqueBarbearia />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/barbearia/servicos" 
+        element={
+          <ProtectedRoute roles={['ADMIN_BARBEARIA']}>
+            <ServicosBarbearia />
           </ProtectedRoute>
         } 
       />

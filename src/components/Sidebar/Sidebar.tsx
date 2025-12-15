@@ -79,7 +79,7 @@ const Sidebar = () => {
           <div className="sidebar-logo">
             <img
               src={typeof logomarcaImg === 'string' ? logomarcaImg : '/logomarca_preto.png'}
-              alt="NaRégua Logo"
+              alt="NaRéguaÍ Logo"
               className="sidebar-logo-image"
             />
           </div>

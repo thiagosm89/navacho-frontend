@@ -1,6 +1,6 @@
-# NaRégua - Frontend
+# NaRéguaÍ - Frontend
 
-Frontend da plataforma NaRégua desenvolvido em React + TypeScript + Vite.
+Frontend da plataforma NaRéguaÍ desenvolvido em React + TypeScript + Vite.
 
 ## 🎨 Paleta de Cores
 
@@ -16,7 +16,7 @@ A paleta de cores utiliza tons de preto e branco, criando uma identidade visual 
 ### Cor Vintage para Títulos e Logos
 - **Bege Vintage**: `#E8D5B7` - **IMPORTANTE**: Esta cor deve ser usada em:
   - **Todos os títulos principais** que usam a fonte `Rye`
-  - **Nome do site "NaRégua"** em todas as logos
+  - **Nome do site "NaRéguaÍ"** em todas as logos
   - **Textos de logo** em todas as páginas (login, register, etc.)
   
   Esta cor vintage adiciona um toque elegante e diferenciado aos elementos principais, evitando que tudo fique apenas em branco.
@@ -44,7 +44,7 @@ A aplicação está organizada em componentes modulares e reutilizáveis:
 ```
 src/
 ├── components/
-│   ├── About/          # Seção sobre o NaRégua
+│   ├── About/          # Seção sobre o NaRéguaÍ
 │   ├── FeatureCard/    # Card de funcionalidade
 │   ├── Features/       # Seção de funcionalidades
 │   ├── Footer/         # Rodapé
@@ -55,7 +55,7 @@ src/
 ├── pages/
 │   └── LandingPage/    # Página principal
 └── assets/
-    └── logomarca_preto.png   # Logo do NaRégua
+    └── logomarca_preto.png   # Logo do NaRéguaÍ
 ```
 
 ## ⏳ Componente de Loading Padrão
@@ -120,7 +120,7 @@ if (carregando) {
 ## 🎯 Funcionalidades da Landing Page
 
 - **Hero Section**: Apresentação principal com logo e call-to-action
-- **Features**: Explicação de como o NaRégua conecta barbeiros, clientes e fornecedores
+- **Features**: Explicação de como o NaRéguaÍ conecta barbeiros, clientes e fornecedores
 - **About**: Informações sobre a plataforma, missão, visão e valores
 - **Footer**: Links rápidos e informações de contato
 
@@ -145,7 +145,7 @@ O design utiliza uma paleta monocromática (preto e branco) com texturas de barb
 
 **SEMPRE usar a cor `#E8D5B7` (bege vintage) para:**
 - Títulos principais com fonte `Rye`
-- Nome do site "NaRégua" em componentes de logo
+- Nome do site "NaRéguaÍ" em componentes de logo
 - Textos de logo em páginas de login, register e outras páginas
 - Qualquer elemento que use a fonte `Rye` em fundos escuros
 
@@ -154,4 +154,4 @@ O design utiliza uma paleta monocromática (preto e branco) com texturas de barb
 - Nome do site em logos
 - Textos de logo
 
-Esta regra garante consistência visual e identidade única da marca NaRégua.
+Esta regra garante consistência visual e identidade única da marca NaRéguaÍ.

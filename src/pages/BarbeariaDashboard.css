@@ -1,0 +1,476 @@
+.barbearia-dashboard-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.barbearia-dashboard-loading,
+.barbearia-dashboard-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.barbearia-dashboard-error {
+  color: #ef4444;
+  font-size: 1.1rem;
+}
+
+.barbearia-dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.barbearia-dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--naregua-branco);
+  margin-bottom: 0.5rem;
+}
+
+.barbearia-dashboard-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.dashboard-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--naregua-branco);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge-notificacao {
+  background: #ef4444;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.btn-ver-estoque,
+.btn-ver-agendamentos {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--naregua-branco);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.btn-ver-estoque:hover,
+.btn-ver-agendamentos:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Notificações */
+.notificacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.notificacao-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.notificacao-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.notificacao-card.critico-zerado {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.notificacao-card.critico-muito-baixo {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.notificacao-card.critico-baixo {
+  border-color: #eab308;
+  background: rgba(234, 179, 8, 0.1);
+}
+
+.notificacao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.badge-nivel {
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-nivel.critico-zerado {
+  background: #ef4444;
+  color: white;
+}
+
+.badge-nivel.critico-muito-baixo {
+  background: #f59e0b;
+  color: white;
+}
+
+.badge-nivel.critico-baixo {
+  background: #eab308;
+  color: #000;
+}
+
+.notificacao-categoria {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+}
+
+.notificacao-item-nome {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--naregua-branco);
+  margin-bottom: 1rem;
+}
+
+.notificacao-info {
+  margin-bottom: 1rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.info-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.info-value {
+  color: var(--naregua-branco);
+  font-weight: 500;
+}
+
+.info-value.critico-zerado {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.info-value.critico-muito-baixo {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.info-value.critico-baixo {
+  color: #eab308;
+  font-weight: 600;
+}
+
+.btn-repor-estoque {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-repor-estoque:hover {
+  background: #1d4ed8;
+}
+
+/* Agendamentos */
+.agendamentos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.agendamento-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.agendamento-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.agendamento-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.agendamento-horario {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--naregua-branco);
+  min-width: 80px;
+}
+
+.agendamento-detalhes {
+  flex: 1;
+}
+
+.agendamento-cliente {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--naregua-branco);
+  margin-bottom: 0.25rem;
+}
+
+.agendamento-servico {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.25rem;
+}
+
+.agendamento-barbeiro {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+}
+
+.badge-status {
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-status.status-confirmado {
+  background: #10b981;
+  color: white;
+}
+
+.badge-status.status-pendente {
+  background: #f59e0b;
+  color: white;
+}
+
+.badge-status.status-em_andamento {
+  background: #3b82f6;
+  color: white;
+}
+
+.badge-status.status-concluido {
+  background: #6366f1;
+  color: white;
+}
+
+.badge-status.status-cancelado {
+  background: #ef4444;
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Acesso Rápido */
+.acesso-rapido-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.acesso-rapido-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.acesso-rapido-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.acesso-rapido-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--naregua-branco);
+  margin-bottom: 0.5rem;
+}
+
+.acesso-rapido-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .barbearia-dashboard-container {
+    padding: 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .notificacoes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agendamento-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .acesso-rapido-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metricas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atendimentos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Métricas */
+.metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metrica-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+}
+
+.metrica-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.metrica-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.metrica-content {
+  flex: 1;
+}
+
+.metrica-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.metrica-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--naregua-branco);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.metrica-subtitle {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.metricas-atendimentos {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.metricas-atendimentos-titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--naregua-branco);
+  margin-bottom: 1rem;
+}
+
+.atendimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.atendimento-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.atendimento-periodo {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.atendimento-valor {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #93c5fd;
+}
+

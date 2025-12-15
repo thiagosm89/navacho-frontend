@@ -35,6 +35,24 @@ export const menuItems: MenuItem[] = [
     roles: ['ADMIN_BARBEARIA'], // Apenas ADMIN_BARBEARIA pode ver
   },
   {
+    label: 'Barbeiros',
+    path: '/barbearia/barbeiros',
+    icon: '💇',
+    roles: ['ADMIN_BARBEARIA'],
+  },
+  {
+    label: 'Estoque',
+    path: '/barbearia/estoque',
+    icon: '📦',
+    roles: ['ADMIN_BARBEARIA'],
+  },
+  {
+    label: 'Serviços',
+    path: '/barbearia/servicos',
+    icon: '✂️',
+    roles: ['ADMIN_BARBEARIA'],
+  },
+  {
     path: '/barbeiro/dashboard',
     label: 'Meu Painel',
     icon: '💇',
@@ -44,7 +62,13 @@ export const menuItems: MenuItem[] = [
     label: 'Agendamentos',
     path: '/agendamentos',
     icon: '📅',
-    roles: ['CLIENTE', 'BARBEIRO', 'ADMIN_BARBEARIA'], // Múltiplas roles podem ver
+    roles: ['CLIENTE', 'BARBEIRO'], // Cliente e barbeiro
+  },
+  {
+    label: 'Atendimentos',
+    path: '/barbearia/agendamentos',
+    icon: '📅',
+    roles: ['ADMIN_BARBEARIA'], // Admin barbearia tem sua própria página
   },
   {
     label: 'Perfil',

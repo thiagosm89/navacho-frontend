@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="hero-logo-wrapper">
             <img 
               src={logoSrc} 
-              alt="NaRégua Logo" 
+              alt="NaRéguaÍ Logo" 
               className="hero-logo"
             />
           </div>
@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="hero-image-wrapper">
             <img 
               src={logoSrc} 
-              alt="NaRégua - Transformando Visuais com Excelência" 
+              alt="NaRéguaÍ - Transformando Visuais com Excelência" 
               className="hero-image-main"
             />
           </div>

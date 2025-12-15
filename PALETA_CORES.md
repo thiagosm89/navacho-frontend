@@ -1,7 +1,7 @@
-# Paleta de Cores - NaRégua
+# Paleta de Cores - NaRéguaÍ
 
 ## Descrição
-Paleta de cores monocromática preto e branco, combinando com a identidade visual minimalista e elegante da logomarca do NaRégua.
+Paleta de cores monocromática preto e branco, combinando com a identidade visual minimalista e elegante da logomarca do NaRéguaÍ.
 
 ## Cores Principais
 

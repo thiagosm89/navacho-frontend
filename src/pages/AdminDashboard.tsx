@@ -73,7 +73,7 @@ const AdminDashboard = () => {
       <div className="dashboard-container">
         <div className="dashboard-header">
           <h1 className="dashboard-title">Dashboard Administrativo</h1>
-          <p className="dashboard-subtitle">Visão geral do sistema NaRégua</p>
+          <p className="dashboard-subtitle">Visão geral do sistema NaRéguaÍ</p>
         </div>
 
         {metricas && (
