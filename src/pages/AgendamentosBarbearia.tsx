@@ -23,7 +23,6 @@ const AgendamentosBarbearia = () => {
   const [filtroStatus, setFiltroStatus] = useState<string>('')
   const [filtroBarbeiro, setFiltroBarbeiro] = useState<string>('')
   const [filtroData, setFiltroData] = useState<string>('')
-  const [dataSelecionada, setDataSelecionada] = useState<Date>(new Date())
   const [mesAtual, setMesAtual] = useState<Date>(new Date())
   const dataParaRestaurarRef = useRef<string | null>(null)
   const [formData, setFormData] = useState<CriarAgendamentoRequest>({
@@ -157,8 +156,6 @@ const AgendamentosBarbearia = () => {
       const dataParaRestaurar = dataParaRestaurarRef.current
       dataParaRestaurarRef.current = null
       setFiltroData(dataParaRestaurar)
-      const dataRestaurada = parsearDataLocal(dataParaRestaurar)
-      setDataSelecionada(dataRestaurada)
     }
   }, [carregando])
 
@@ -460,7 +457,6 @@ const AgendamentosBarbearia = () => {
       const dia = data.getDate()
       const dataLimpa = new Date(ano, mes, dia, 12, 0, 0, 0)
       
-      setDataSelecionada(dataLimpa)
       // Usar formatação local para evitar problemas de timezone
       const dataStr = formatarDataLocal(dataLimpa)
       setFiltroData(dataStr)
@@ -636,7 +632,6 @@ const AgendamentosBarbearia = () => {
                 className="btn-limpar-data"
                 onClick={() => {
                   setFiltroData('')
-                  setDataSelecionada(new Date())
                 }}
               >
                 ✕ {parsearDataLocal(filtroData).toLocaleDateString('pt-BR')}
