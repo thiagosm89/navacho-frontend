@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import { obterPerfisDisponiveis, obterDashboardPadrao } from '../utils/perfilUtils'
 import { PapelUsuario } from '../types/roles'
+import { API_BASE_URL } from '../config/api'
 import logomarcaImg from '../assets/logomarca_preto.png'
 import './Login.css'
 
@@ -56,7 +57,7 @@ const Login = () => {
     setCarregando(true)
 
     try {
-      const response = await fetch('http://localhost:3000/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

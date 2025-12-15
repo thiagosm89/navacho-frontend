@@ -1,4 +1,5 @@
 import { PapelUsuario } from '../types/roles'
+import { API_BASE_URL } from '../config/api'
 
 export interface Usuario {
   id: string
@@ -21,7 +22,7 @@ export interface ListaUsuariosResponse {
 }
 
 class UsuarioService {
-  private baseUrl = 'http://localhost:3000'
+  private baseUrl = API_BASE_URL
 
   async listarUsuarios(params?: {
     pagina?: number

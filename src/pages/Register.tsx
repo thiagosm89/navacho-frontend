@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
+import { API_BASE_URL } from '../config/api'
 import logomarcaImg from '../assets/logomarca_preto.png'
 import './Register.css'
 
@@ -196,7 +197,7 @@ const Register = () => {
 
     try {
       // TODO: Integrar com API do backend
-      const response = await fetch('http://localhost:3000/auth/register', {
+      const response = await fetch(`${API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
