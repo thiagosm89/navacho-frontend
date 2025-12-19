@@ -5,7 +5,8 @@ export interface Usuario {
   id: string
   nome: string
   email: string
-  papel: PapelUsuario
+  papel?: PapelUsuario // Mantido para compatibilidade (deprecated)
+  papeis: PapelUsuario[] // Novo formato: array de papéis
   telefone?: string | null
   cpf?: string | null
   cnpj?: string | null
@@ -43,7 +44,7 @@ class UsuarioService {
     if (params?.papel) queryParams.append('papel', params.papel)
     if (params?.ativo !== undefined) queryParams.append('ativo', params.ativo.toString())
 
-    const response = await fetch(`${this.baseUrl}/admin/usuarios?${queryParams.toString()}`, {
+    const response = await fetch(`${this.baseUrl}/usuarios?${queryParams.toString()}`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -68,7 +69,7 @@ class UsuarioService {
       throw new Error('Não autenticado')
     }
 
-    const response = await fetch(`${this.baseUrl}/admin/usuarios/${usuarioId}/status`, {
+    const response = await fetch(`${this.baseUrl}/usuarios/${usuarioId}/status`, {
       method: 'PATCH',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -86,19 +87,19 @@ class UsuarioService {
     }
   }
 
-  async atualizarPapelUsuario(usuarioId: string, papel: PapelUsuario): Promise<void> {
+  async atualizarPapeisUsuario(usuarioId: string, papeis: PapelUsuario[]): Promise<void> {
     const token = localStorage.getItem('access_token')
     if (!token) {
       throw new Error('Não autenticado')
     }
 
-    const response = await fetch(`${this.baseUrl}/admin/usuarios/${usuarioId}/papel`, {
+    const response = await fetch(`${this.baseUrl}/usuarios/${usuarioId}/papeis`, {
       method: 'PATCH',
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ papel }),
+      body: JSON.stringify({ papeis }),
     })
 
     if (!response.ok) {
@@ -106,8 +107,14 @@ class UsuarioService {
         throw new Error('Não autorizado')
       }
       const data = await response.json()
-      throw new Error(data.mensagem || 'Erro ao atualizar papel do usuário')
+      throw new Error(data.mensagem || 'Erro ao atualizar papéis do usuário')
     }
+  }
+
+  // Método mantido para compatibilidade (deprecated)
+  async atualizarPapelUsuario(usuarioId: string, papel: PapelUsuario): Promise<void> {
+    // Converter papel único para array
+    await this.atualizarPapeisUsuario(usuarioId, [papel])
   }
 
   async contarAdministradoresAtivos(excluirUsuarioId?: string): Promise<number> {
@@ -123,7 +130,7 @@ class UsuarioService {
       queryParams.append('excluirId', excluirUsuarioId)
     }
 
-    const response = await fetch(`${this.baseUrl}/admin/usuarios/contar-admins?${queryParams.toString()}`, {
+    const response = await fetch(`${this.baseUrl}/usuarios/contar-admins?${queryParams.toString()}`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,

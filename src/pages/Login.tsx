@@ -38,9 +38,13 @@ const Login = () => {
           return
         }
 
-        // Fallback: redirecionar para dashboard padrão
-        const papel = usuario.papel as PapelUsuario
-        navigate(obterDashboardPadrao(papel), { replace: true })
+        // Fallback: redirecionar para dashboard padrão usando o primeiro papel
+        const papeis = usuario?.papeis || (usuario?.papel ? [usuario.papel] : [])
+        if (papeis.length > 0) {
+          navigate(obterDashboardPadrao(papeis[0] as PapelUsuario), { replace: true })
+        } else {
+          navigate('/barbearias', { replace: true })
+        }
       } catch (error) {
         // Se houver erro ao parsear, limpar e continuar na tela de login
         localStorage.removeItem('access_token')
@@ -89,16 +93,16 @@ const Login = () => {
         return
       }
       
-      // Se tiver apenas um perfil, redirecionar direto
+      // Se tiver apenas um perfil, redirecionar direto usando o papel da posição 0
       if (perfis.length === 1) {
         navigate(perfis[0].path, { replace: true })
         return
       }
       
-      // Fallback: redirecionar para dashboard padrão baseado no papel
-      const papel = data.usuario?.papel as PapelUsuario
-      if (papel) {
-        navigate(obterDashboardPadrao(papel), { replace: true })
+      // Fallback: redirecionar para dashboard padrão baseado no primeiro papel
+      const papeis = data.usuario?.papeis || (data.usuario?.papel ? [data.usuario.papel] : [])
+      if (papeis.length > 0) {
+        navigate(obterDashboardPadrao(papeis[0] as PapelUsuario), { replace: true })
       } else {
         navigate('/barbearias', { replace: true })
       }

@@ -30,7 +30,9 @@ const AdminUsuarios = () => {
 
     try {
       const usuario = JSON.parse(usuarioStr)
-      if (usuario.papel !== 'ADMIN') {
+      // Verificar se o usuário tem o papel ADMIN
+      const papeis: string[] = usuario?.papeis || (usuario?.papel ? [usuario.papel] : [])
+      if (!papeis.includes('ADMIN')) {
         navigate('/login')
         return
       }
@@ -156,12 +158,13 @@ const AdminUsuarios = () => {
       return
     }
 
-    if (!confirm(`Tem certeza que deseja alterar o papel deste usuário?`)) {
+    if (!confirm(`Tem certeza que deseja alterar o papel deste usuário para ${getPapelLabel(novoPapel)}?`)) {
       return
     }
 
     try {
-      await usuarioService.atualizarPapelUsuario(usuarioId, novoPapel)
+      // Atualizar para usar apenas o novo papel (substitui todos os papéis existentes)
+      await usuarioService.atualizarPapeisUsuario(usuarioId, [novoPapel])
       // Recarregar lista
       carregarUsuarios()
     } catch (error) {
@@ -296,9 +299,21 @@ const AdminUsuarios = () => {
                     <td>{usuario.email}</td>
                     <td>{usuario.telefone || '-'}</td>
                     <td>
-                      <span className={`badge ${getPapelBadgeClass(usuario.papel)}`}>
-                        {getPapelLabel(usuario.papel)}
-                      </span>
+                      {usuario.papeis && usuario.papeis.length > 0 ? (
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                          {usuario.papeis.map((papel, index) => (
+                            <span key={index} className={`badge ${getPapelBadgeClass(papel)}`}>
+                              {getPapelLabel(papel)}
+                            </span>
+                          ))}
+                        </div>
+                      ) : usuario.papel ? (
+                        <span className={`badge ${getPapelBadgeClass(usuario.papel)}`}>
+                          {getPapelLabel(usuario.papel)}
+                        </span>
+                      ) : (
+                        <span className="badge badge-default">Sem papel</span>
+                      )}
                     </td>
                     <td>
                       <span className={`status-badge ${usuario.ativo ? 'ativo' : 'inativo'}`}>
@@ -309,7 +324,12 @@ const AdminUsuarios = () => {
                     <td>
                       <div className="acoes-cell">
                         <button
-                          onClick={() => handleToggleStatus(usuario.id, usuario.ativo, usuario.papel)}
+                          onClick={() => {
+                            const primeiroPapel = usuario.papeis && usuario.papeis.length > 0 
+                              ? usuario.papeis[0] 
+                              : (usuario.papel || 'CLIENTE' as PapelUsuario)
+                            handleToggleStatus(usuario.id, usuario.ativo, primeiroPapel)
+                          }}
                           className={`btn-acao ${usuario.ativo ? 'btn-desativar' : 'btn-ativar'}`}
                           title={usuario.ativo ? 'Desativar' : 'Ativar'}
                           disabled={usuario.id === usuarioLogadoId && usuario.ativo}
@@ -317,10 +337,10 @@ const AdminUsuarios = () => {
                           {usuario.ativo ? '🚫' : '✅'}
                         </button>
                         <select
-                          value={usuario.papel}
+                          value={usuario.papeis && usuario.papeis.length > 0 ? usuario.papeis[0] : (usuario.papel || '')}
                           onChange={(e) => handleMudarPapel(usuario.id, e.target.value as PapelUsuario)}
                           className="select-papel"
-                          title={usuario.id === usuarioLogadoId ? 'Você não pode alterar seu próprio papel' : 'Alterar papel'}
+                          title={usuario.id === usuarioLogadoId ? 'Você não pode alterar seu próprio papel' : 'Alterar papel (substitui todos os papéis)'}
                           disabled={usuario.id === usuarioLogadoId}
                         >
                           <option value="ADMIN">Administrador</option>

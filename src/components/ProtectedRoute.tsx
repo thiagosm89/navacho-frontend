@@ -19,17 +19,25 @@ const ProtectedRoute = ({ children, roles }: ProtectedRouteProps) => {
 
   try {
     const usuario = JSON.parse(usuarioStr)
-    const papel = usuario.papel as PapelUsuario
+    
+    // Obter array de papéis do usuário
+    const papeis: PapelUsuario[] = usuario?.papeis || (usuario?.papel ? [usuario.papel] : [])
 
-    // Se especificou roles, verificar se o usuário tem uma delas
+    // Se especificou roles, verificar se o usuário tem pelo menos uma delas
     if (roles && roles.length > 0) {
-      if (!roles.includes(papel)) {
+      const temPermissao = papeis.some(papel => roles.includes(papel))
+      
+      if (!temPermissao) {
         // Usuário não tem permissão, redirecionar para dashboard padrão
         const perfis = obterPerfisDisponiveis(usuario)
         if (perfis.length > 0) {
           return <Navigate to={perfis[0].path} replace />
         }
-        return <Navigate to={obterDashboardPadrao(papel)} replace />
+        // Fallback: usar o primeiro papel disponível
+        if (papeis.length > 0) {
+          return <Navigate to={obterDashboardPadrao(papeis[0])} replace />
+        }
+        return <Navigate to="/barbearias" replace />
       }
     }
 

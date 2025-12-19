@@ -31,7 +31,9 @@ const CadastroBarbeiros = () => {
 
     try {
       const usuario = JSON.parse(usuarioStr)
-      if (usuario.papel !== 'ADMIN_BARBEARIA') {
+      // Verificar se o usuário tem o papel ADMIN_BARBEARIA
+      const papeis: string[] = usuario?.papeis || (usuario?.papel ? [usuario.papel] : [])
+      if (!papeis.includes('ADMIN_BARBEARIA')) {
         navigate('/login')
         return
       }

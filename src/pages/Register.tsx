@@ -11,9 +11,8 @@ interface EnderecoViaCEP {
   logradouro: string
   complemento: string
   bairro: string
-  localidade: string
-  uf: string
-  erro?: boolean
+  cidade: string
+  estado: string
 }
 
 const Register = () => {
@@ -31,6 +30,7 @@ const Register = () => {
   const [endereco, setEndereco] = useState('')
   const [numero, setNumero] = useState('')
   const [complemento, setComplemento] = useState('')
+  const [bairro, setBairro] = useState('')
   const [cidade, setCidade] = useState('')
   const [estado, setEstado] = useState('')
   const [carregandoCep, setCarregandoCep] = useState(false)
@@ -94,23 +94,39 @@ const Register = () => {
     setErro('')
 
     try {
-      const response = await fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`)
-      const data: EnderecoViaCEP = await response.json()
-
-      if (data.erro) {
-        setErro('CEP não encontrado. Verifique e tente novamente.')
+      const response = await fetch(`${API_BASE_URL}/api/cep/${cepLimpo}`)
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        setErro(errorData.message || 'CEP não encontrado. Verifique e tente novamente.')
         setEndereco('')
         setCidade('')
         setEstado('')
-      } else {
+        return
+      }
+
+      const data: EnderecoViaCEP = await response.json()
+
+      if (data.cidade && data.estado) {
         setEndereco(data.logradouro || '')
-        setCidade(data.localidade || '')
-        setEstado(data.uf || '')
+        setBairro(data.bairro || '')
+        setCidade(data.cidade || '')
+        setEstado(data.estado || '')
         setErro('')
+      } else {
+        setErro('CEP não encontrado. Verifique e tente novamente.')
+        setEndereco('')
+        setBairro('')
+        setCidade('')
+        setEstado('')
       }
     } catch (error) {
       setErro('Erro ao buscar CEP. Tente novamente.')
       console.error('Erro ao buscar CEP:', error)
+      setEndereco('')
+      setBairro('')
+      setCidade('')
+      setEstado('')
     } finally {
       setCarregandoCep(false)
     }
@@ -126,6 +142,7 @@ const Register = () => {
     } else {
       // Limpa os campos se o CEP não estiver completo
       setEndereco('')
+      setBairro('')
       setCidade('')
       setEstado('')
     }
@@ -196,23 +213,23 @@ const Register = () => {
     setCarregando(true)
 
     try {
-      // TODO: Integrar com API do backend
-      const response = await fetch(`${API_BASE_URL}/auth/register`, {
+      const response = await fetch(`${API_BASE_URL}/auth/registrar`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           nome,
-          celular: celular.replace(/\D/g, ''),
           email,
+          senha,
+          celular: celular.replace(/\D/g, ''),
           cep: cep.replace(/\D/g, ''),
           endereco,
           numero,
-          complemento,
+          complemento: complemento || undefined,
+          bairro: bairro || undefined,
           cidade,
           estado,
-          senha,
         }),
       })
 
@@ -374,6 +391,18 @@ const Register = () => {
                   onChange={(e) => setComplemento(e.target.value)}
                   placeholder="Apto, Bloco, etc. (opcional)"
                   disabled={carregando}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="bairro">Bairro</label>
+                <input
+                  type="text"
+                  id="bairro"
+                  value={bairro}
+                  onChange={(e) => setBairro(e.target.value)}
+                  placeholder="Bairro (opcional)"
+                  disabled={carregando || carregandoCep}
                 />
               </div>
 

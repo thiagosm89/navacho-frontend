@@ -21,11 +21,14 @@ const AdminDashboard = () => {
 
     try {
       const usuario = JSON.parse(usuarioStr)
-      if (usuario.papel !== 'ADMIN') {
+      // Verificar se o usuário tem o papel ADMIN
+      const papeis: string[] = usuario?.papeis || (usuario?.papel ? [usuario.papel] : [])
+      
+      if (!papeis.includes('ADMIN')) {
         navigate('/login')
         return
       }
-    } catch {
+    } catch (error) {
       navigate('/login')
       return
     }

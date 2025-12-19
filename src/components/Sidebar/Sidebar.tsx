@@ -17,7 +17,9 @@ const Sidebar = () => {
     if (usuarioStr) {
       try {
         const usuario = JSON.parse(usuarioStr)
-        setUsuarioRole(usuario.papel as PapelUsuario)
+        // Obter o primeiro papel do usuário (para compatibilidade com temRole)
+        const papeis = usuario?.papeis || (usuario?.papel ? [usuario.papel] : [])
+        setUsuarioRole(papeis.length > 0 ? (papeis[0] as PapelUsuario) : undefined)
       } catch (error) {
         console.error('Erro ao carregar usuário:', error)
       }
